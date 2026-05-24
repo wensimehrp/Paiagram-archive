@@ -1,0 +1,9 @@
+(function() {
+    const implementors = Object.fromEntries([["paiagram_core",[["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/beta/core/fmt/trait.Display.html\" title=\"trait core::fmt::Display\">Display</a> for <a class=\"struct\" href=\"paiagram_core/graph/struct.NodeCoor.html\" title=\"struct paiagram_core::graph::NodeCoor\">NodeCoor</a>",0],["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/beta/core/fmt/trait.Display.html\" title=\"trait core::fmt::Display\">Display</a> for <a class=\"struct\" href=\"paiagram_core/units/distance/struct.Distance.html\" title=\"struct paiagram_core::units::distance::Distance\">Distance</a>",0],["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/beta/core/fmt/trait.Display.html\" title=\"trait core::fmt::Display\">Display</a> for <a class=\"struct\" href=\"paiagram_core/units/speed/struct.Velocity.html\" title=\"struct paiagram_core::units::speed::Velocity\">Velocity</a>",0],["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/beta/core/fmt/trait.Display.html\" title=\"trait core::fmt::Display\">Display</a> for <a class=\"struct\" href=\"paiagram_core/units/time/struct.Duration.html\" title=\"struct paiagram_core::units::time::Duration\">Duration</a>",0],["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/beta/core/fmt/trait.Display.html\" title=\"trait core::fmt::Display\">Display</a> for <a class=\"struct\" href=\"paiagram_core/units/time/struct.TimetableTime.html\" title=\"struct paiagram_core::units::time::TimetableTime\">TimetableTime</a>",0]]]]);
+    if (window.register_implementors) {
+        window.register_implementors(implementors);
+    } else {
+        window.pending_implementors = implementors;
+    }
+})()
+//{"start":59,"fragment_lengths":[1488]}

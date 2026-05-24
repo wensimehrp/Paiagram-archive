@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["all_tabs","classes","diagram","graph","inspector","priority_graph","route_timetable","settings","start","station","trip"],"trait":["Navigatable","Tab"]};

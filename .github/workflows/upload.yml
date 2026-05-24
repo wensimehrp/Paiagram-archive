@@ -1,0 +1,97 @@
+name: Upload
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: upload-main
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+
+      - uses: actions/checkout@v5
+
+      - name: Snapshot nightly archive (retain 7)
+        run: |
+          set -euo pipefail
+          RETENTION_COUNT=15
+
+          # ISO 8601 basic UTC format (YYYYMMDDTHHMMSSZ) sorts correctly lexicographically.
+          list_snapshots() {
+            find . -maxdepth 1 -mindepth 1 -type d -name 'snapshot_*' -printf '%f\n' | sort -r
+          }
+
+          if [[ ! -f nightly/git-revision.txt ]]; then
+            echo "nightly/git-revision.txt not found; skipping snapshot."
+            exit 0
+          fi
+
+          current_revision="$(tr -d '\r\n' < nightly/git-revision.txt)"
+          latest_snapshot="$(list_snapshots | head -n 1 || true)"
+          latest_revision=""
+
+          if [[ -n "${latest_snapshot}" && -f "${latest_snapshot}/git-revision.txt" ]]; then
+            latest_revision="$(tr -d '\r\n' < "${latest_snapshot}/git-revision.txt")"
+          fi
+
+          if [[ "${current_revision}" != "${latest_revision}" ]]; then
+            snapshot_dir="snapshot_$(date -u +%Y%m%dT%H%M%SZ)"
+            cp -a nightly "${snapshot_dir}"
+            echo "Created ${snapshot_dir} for revision ${current_revision}."
+          else
+            echo "No new nightly revision; snapshot not created."
+          fi
+
+          mapfile -t snapshot_dirs < <(list_snapshots)
+          if (( ${#snapshot_dirs[@]} > RETENTION_COUNT )); then
+            for old_snapshot in "${snapshot_dirs[@]:RETENTION_COUNT}"; do
+              rm -rf "${old_snapshot}"
+              echo "Removed old snapshot ${old_snapshot}."
+            done
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo "No snapshot changes to commit."
+            exit 0
+          fi
+
+          git commit -m "archive: update nightly snapshots"
+
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            if (( attempt == 3 )); then
+              echo "Failed to push snapshot commit after retries."
+              exit 1
+            fi
+            git fetch origin main
+            git rebase origin/main || { echo "Rebase failed."; exit 1; }
+          done
+
+      - run: |
+          rm -rf .github
+          find . -maxdepth 1 -type f -delete
+          mv main/* ./
+          mv main-extra/* ./
+          rm -rf main main-extra
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy ./ --project-name=paiagram --branch=main
