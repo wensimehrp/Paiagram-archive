@@ -1,9 +1,0 @@
-(function() {
-    const implementors = Object.fromEntries([["paiagram_core",[["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/beta/core/ops/arith/trait.DivAssign.html\" title=\"trait core::ops::arith::DivAssign\">DivAssign</a>&lt;<a class=\"primitive\" href=\"https://doc.rust-lang.org/beta/std/primitive.f32.html\">f32</a>&gt; for <a class=\"struct\" href=\"paiagram_core/units/distance/struct.Distance.html\" title=\"struct paiagram_core::units::distance::Distance\">Distance</a>",0],["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/beta/core/ops/arith/trait.DivAssign.html\" title=\"trait core::ops::arith::DivAssign\">DivAssign</a>&lt;<a class=\"primitive\" href=\"https://doc.rust-lang.org/beta/std/primitive.f32.html\">f32</a>&gt; for <a class=\"struct\" href=\"paiagram_core/units/speed/struct.Velocity.html\" title=\"struct paiagram_core::units::speed::Velocity\">Velocity</a>",0],["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/beta/core/ops/arith/trait.DivAssign.html\" title=\"trait core::ops::arith::DivAssign\">DivAssign</a>&lt;<a class=\"primitive\" href=\"https://doc.rust-lang.org/beta/std/primitive.i32.html\">i32</a>&gt; for <a class=\"struct\" href=\"paiagram_core/units/distance/struct.Distance.html\" title=\"struct paiagram_core::units::distance::Distance\">Distance</a>",0],["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/beta/core/ops/arith/trait.DivAssign.html\" title=\"trait core::ops::arith::DivAssign\">DivAssign</a>&lt;<a class=\"primitive\" href=\"https://doc.rust-lang.org/beta/std/primitive.i32.html\">i32</a>&gt; for <a class=\"struct\" href=\"paiagram_core/units/time/struct.Duration.html\" title=\"struct paiagram_core::units::time::Duration\">Duration</a>",0]]]]);
-    if (window.register_implementors) {
-        window.register_implementors(implementors);
-    } else {
-        window.pending_implementors = implementors;
-    }
-})()
-//{"start":59,"fragment_lengths":[1681]}
