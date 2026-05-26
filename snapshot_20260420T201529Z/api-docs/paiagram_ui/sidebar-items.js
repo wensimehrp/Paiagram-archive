@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["MainTab"],"fn":["apply_custom_fonts","show_ui"],"mod":["export_typst_diagram","save","tabs"],"struct":["GlobalTimer","MainUiState","UiPlugin"]};
