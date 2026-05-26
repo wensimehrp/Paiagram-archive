@@ -2,14 +2,14 @@
 <a href=#2 id=2 data-nosnippet>2</a>
 <a href=#3 id=3 data-nosnippet>3</a><span class="kw">use </span>bevy::prelude::<span class="kw-2">*</span>;
 <a href=#4 id=4 data-nosnippet>4</a><span class="kw">use </span>egui::{Context, Key, NumExt, Ui};
-<a href=#5 id=5 data-nosnippet>5</a><span class="kw">use </span>ib_matcher::matcher::{IbMatcher, PinyinMatchConfig, RomajiMatchConfig};
-<a href=#6 id=6 data-nosnippet>6</a><span class="kw">use </span>ib_matcher::pinyin::PinyinNotation;
-<a href=#7 id=7 data-nosnippet>7</a><span class="kw">use </span>paiagram_core::route::Route;
-<a href=#8 id=8 data-nosnippet>8</a><span class="kw">use </span>paiagram_core::station::Station;
-<a href=#9 id=9 data-nosnippet>9</a><span class="kw">use </span>paiagram_core::trip::Trip;
-<a href=#10 id=10 data-nosnippet>10</a>
-<a href=#11 id=11 data-nosnippet>11</a><span class="kw">use </span>super::{MainTab, OpenOrFocus};
-<a href=#12 id=12 data-nosnippet>12</a><span class="kw">use </span><span class="kw">crate</span>::tabs::Tab;
+<a href=#5 id=5 data-nosnippet>5</a><span class="kw">use </span>egui_i18n::tr;
+<a href=#6 id=6 data-nosnippet>6</a><span class="kw">use </span>ib_matcher::matcher::{IbMatcher, PinyinMatchConfig, RomajiMatchConfig};
+<a href=#7 id=7 data-nosnippet>7</a><span class="kw">use </span>ib_matcher::pinyin::PinyinNotation;
+<a href=#8 id=8 data-nosnippet>8</a><span class="kw">use </span>paiagram_core::route::Route;
+<a href=#9 id=9 data-nosnippet>9</a><span class="kw">use </span>paiagram_core::station::Station;
+<a href=#10 id=10 data-nosnippet>10</a><span class="kw">use </span>paiagram_core::trip::Trip;
+<a href=#11 id=11 data-nosnippet>11</a>
+<a href=#12 id=12 data-nosnippet>12</a><span class="kw">use </span>super::{MainTab, OpenOrFocus};
 <a href=#13 id=13 data-nosnippet>13</a><span class="kw">use </span><span class="kw">crate</span>::tabs::all_tabs::<span class="kw-2">*</span>;
 <a href=#14 id=14 data-nosnippet>14</a>
 <a href=#15 id=15 data-nosnippet>15</a><span class="comment">// TODO: make this based on settings
@@ -146,95 +146,98 @@
 <a href=#146 id=146 data-nosnippet>146</a>            <span class="kw-2">*</span>matcher = build_matcher();
 <a href=#147 id=147 data-nosnippet>147</a>            matched.clear();
 <a href=#148 id=148 data-nosnippet>148</a>            <span class="kw">let </span><span class="kw-2">mut </span>match_string = String::new();
-<a href=#149 id=149 data-nosnippet>149</a>            <span class="kw">const </span>PANEL_INFO: <span class="kw-2">&amp;</span>[(<span class="kw-2">&amp;</span>str, <span class="kw">fn</span>() -&gt; MainTab)] = <span class="kw-2">&amp;</span>[
-<a href=#150 id=150 data-nosnippet>150</a>                (StartTab::NAME, || MainTab::Start(StartTab::default())),
-<a href=#151 id=151 data-nosnippet>151</a>                (SettingsTab::NAME, || MainTab::Settings(SettingsTab)),
-<a href=#152 id=152 data-nosnippet>152</a>                (ClassesTab::NAME, || MainTab::Classes(ClassesTab::default())),
-<a href=#153 id=153 data-nosnippet>153</a>            ];
-<a href=#154 id=154 data-nosnippet>154</a>            <span class="kw">for </span>(name, fn_ptr) <span class="kw">in </span>PANEL_INFO.iter().copied() {
-<a href=#155 id=155 data-nosnippet>155</a>                match_string.clear();
-<a href=#156 id=156 data-nosnippet>156</a>                match_string.push_str(name);
-<a href=#157 id=157 data-nosnippet>157</a>                match_string.push_str(<span class="string">" (Tab)"</span>);
-<a href=#158 id=158 data-nosnippet>158</a>                <span class="kw">if </span>!matcher.is_match(match_string.as_str()) {
-<a href=#159 id=159 data-nosnippet>159</a>                    <span class="kw">continue</span>;
-<a href=#160 id=160 data-nosnippet>160</a>                }
-<a href=#161 id=161 data-nosnippet>161</a>                matched.push((name.to_string(), MatchedType::Tab(fn_ptr)));
-<a href=#162 id=162 data-nosnippet>162</a>            }
-<a href=#163 id=163 data-nosnippet>163</a>            <span class="kw">for </span>(e, name, matched_type) <span class="kw">in </span>names {
-<a href=#164 id=164 data-nosnippet>164</a>                match_string.clear();
-<a href=#165 id=165 data-nosnippet>165</a>                <span class="kw">let </span>(matched_type, matched_str) = <span class="kw">match </span>matched_type {
-<a href=#166 id=166 data-nosnippet>166</a>                    (<span class="prelude-val">Some</span>(<span class="kw">_</span>), <span class="kw">_</span>, <span class="kw">_</span>) =&gt; (MatchedType::Trip(e), <span class="string">"trip"</span>),
-<a href=#167 id=167 data-nosnippet>167</a>                    (<span class="kw">_</span>, <span class="prelude-val">Some</span>(<span class="kw">_</span>), <span class="kw">_</span>) =&gt; (MatchedType::Station(e), <span class="string">"station"</span>),
-<a href=#168 id=168 data-nosnippet>168</a>                    (<span class="kw">_</span>, <span class="kw">_</span>, <span class="prelude-val">Some</span>(<span class="kw">_</span>)) =&gt; (MatchedType::Route(e), <span class="string">"route"</span>),
-<a href=#169 id=169 data-nosnippet>169</a>                    (<span class="prelude-val">None</span>, <span class="prelude-val">None</span>, <span class="prelude-val">None</span>) =&gt; <span class="macro">unreachable!</span>(),
-<a href=#170 id=170 data-nosnippet>170</a>                };
-<a href=#171 id=171 data-nosnippet>171</a>                match_string.push_str(name.as_str());
-<a href=#172 id=172 data-nosnippet>172</a>                match_string.push_str(<span class="string">" "</span>);
-<a href=#173 id=173 data-nosnippet>173</a>                match_string.push_str(matched_str);
-<a href=#174 id=174 data-nosnippet>174</a>                <span class="kw">if </span>!matcher.is_match(match_string.as_str()) {
-<a href=#175 id=175 data-nosnippet>175</a>                    <span class="kw">continue</span>;
-<a href=#176 id=176 data-nosnippet>176</a>                }
-<a href=#177 id=177 data-nosnippet>177</a>                matched.push((name.to_string(), matched_type));
-<a href=#178 id=178 data-nosnippet>178</a>                <span class="kw">if </span>matched.len() &gt;= <span class="number">100 </span>{
-<a href=#179 id=179 data-nosnippet>179</a>                    <span class="kw">break</span>;
-<a href=#180 id=180 data-nosnippet>180</a>                }
-<a href=#181 id=181 data-nosnippet>181</a>            }
-<a href=#182 id=182 data-nosnippet>182</a>        }
-<a href=#183 id=183 data-nosnippet>183</a>
-<a href=#184 id=184 data-nosnippet>184</a>        <span class="kw">for </span>(i, (name, matched_type)) <span class="kw">in </span>matched.iter().enumerate() {
-<a href=#185 id=185 data-nosnippet>185</a>            <span class="kw">let </span>selected = i == panel.selected_alternative;
-<a href=#186 id=186 data-nosnippet>186</a>            <span class="kw">let </span>response = ui.add_sized(
-<a href=#187 id=187 data-nosnippet>187</a>                egui::vec2(ui.available_width(), item_height),
-<a href=#188 id=188 data-nosnippet>188</a>                egui::Button::new(name).right_text(<span class="kw">match </span>matched_type {
-<a href=#189 id=189 data-nosnippet>189</a>                    MatchedType::Route(<span class="kw">_</span>) =&gt; <span class="string">"(Route)"</span>,
-<a href=#190 id=190 data-nosnippet>190</a>                    MatchedType::Station(<span class="kw">_</span>) =&gt; <span class="string">"(Station)"</span>,
-<a href=#191 id=191 data-nosnippet>191</a>                    MatchedType::Trip(<span class="kw">_</span>) =&gt; <span class="string">"(Trip)"</span>,
-<a href=#192 id=192 data-nosnippet>192</a>                    MatchedType::Tab(<span class="kw">_</span>) =&gt; <span class="string">"(Tab)"</span>,
-<a href=#193 id=193 data-nosnippet>193</a>                }),
-<a href=#194 id=194 data-nosnippet>194</a>            );
-<a href=#195 id=195 data-nosnippet>195</a>            <span class="kw">if </span>response.clicked() {
-<a href=#196 id=196 data-nosnippet>196</a>                selected_and_determined |= <span class="bool-val">true</span>;
-<a href=#197 id=197 data-nosnippet>197</a>            }
-<a href=#198 id=198 data-nosnippet>198</a>            <span class="kw">if </span>selected {
-<a href=#199 id=199 data-nosnippet>199</a>                ui.painter().rect_filled(
-<a href=#200 id=200 data-nosnippet>200</a>                    response.rect.expand(<span class="number">1.0</span>),
-<a href=#201 id=201 data-nosnippet>201</a>                    <span class="number">2</span>,
-<a href=#202 id=202 data-nosnippet>202</a>                    ui.visuals().selection.bg_fill.gamma_multiply(<span class="number">0.5</span>),
-<a href=#203 id=203 data-nosnippet>203</a>                );
-<a href=#204 id=204 data-nosnippet>204</a>
-<a href=#205 id=205 data-nosnippet>205</a>                <span class="kw">if </span>enter_pressed {
-<a href=#206 id=206 data-nosnippet>206</a>                    commands.write_message(OpenOrFocus(<span class="kw">match </span>matched_type {
-<a href=#207 id=207 data-nosnippet>207</a>                        MatchedType::Route(e) =&gt; MainTab::Diagram(DiagramTab::new(<span class="kw-2">*</span>e)),
-<a href=#208 id=208 data-nosnippet>208</a>                        MatchedType::Station(e) =&gt; MainTab::Station(StationTab::new(<span class="kw-2">*</span>e)),
-<a href=#209 id=209 data-nosnippet>209</a>                        MatchedType::Trip(e) =&gt; MainTab::Trip(TripTab::new(<span class="kw-2">*</span>e)),
-<a href=#210 id=210 data-nosnippet>210</a>                        MatchedType::Tab(f) =&gt; f(),
-<a href=#211 id=211 data-nosnippet>211</a>                    }));
-<a href=#212 id=212 data-nosnippet>212</a>                    selected_and_determined |= <span class="bool-val">true</span>;
-<a href=#213 id=213 data-nosnippet>213</a>                }
-<a href=#214 id=214 data-nosnippet>214</a>
-<a href=#215 id=215 data-nosnippet>215</a>                <span class="kw">if </span>scroll_to_selected_alternative {
-<a href=#216 id=216 data-nosnippet>216</a>                    ui.scroll_to_rect(response.rect, <span class="prelude-val">None</span>);
-<a href=#217 id=217 data-nosnippet>217</a>                }
-<a href=#218 id=218 data-nosnippet>218</a>            }
-<a href=#219 id=219 data-nosnippet>219</a>            num_alternatives += <span class="number">1</span>;
-<a href=#220 id=220 data-nosnippet>220</a>        }
-<a href=#221 id=221 data-nosnippet>221</a>
-<a href=#222 id=222 data-nosnippet>222</a>        <span class="kw">if </span>num_alternatives == <span class="number">0 </span>{
-<a href=#223 id=223 data-nosnippet>223</a>            ui.weak(<span class="string">"Nothing matched..."</span>);
-<a href=#224 id=224 data-nosnippet>224</a>        }
-<a href=#225 id=225 data-nosnippet>225</a>
-<a href=#226 id=226 data-nosnippet>226</a>        panel.selected_alternative = panel.selected_alternative.saturating_sub(
-<a href=#227 id=227 data-nosnippet>227</a>            ui.input_mut(|i| i.count_and_consume_key(Default::default(), Key::ArrowUp)),
-<a href=#228 id=228 data-nosnippet>228</a>        );
-<a href=#229 id=229 data-nosnippet>229</a>        panel.selected_alternative = panel.selected_alternative.saturating_add(
-<a href=#230 id=230 data-nosnippet>230</a>            ui.input_mut(|i| i.count_and_consume_key(Default::default(), Key::ArrowDown)),
+<a href=#149 id=149 data-nosnippet>149</a>            <span class="kw">let </span>panel_info: [(String, <span class="kw">fn</span>() -&gt; MainTab); <span class="number">4</span>] = [
+<a href=#150 id=150 data-nosnippet>150</a>                (<span class="macro">tr!</span>(<span class="string">"tab-start"</span>), || MainTab::Start(StartTab::default())),
+<a href=#151 id=151 data-nosnippet>151</a>                (<span class="macro">tr!</span>(<span class="string">"tab-settings"</span>), || MainTab::Settings(SettingsTab)),
+<a href=#152 id=152 data-nosnippet>152</a>                (<span class="macro">tr!</span>(<span class="string">"tab-classes"</span>), || {
+<a href=#153 id=153 data-nosnippet>153</a>                    MainTab::Classes(ClassesTab::default())
+<a href=#154 id=154 data-nosnippet>154</a>                }),
+<a href=#155 id=155 data-nosnippet>155</a>                (<span class="macro">tr!</span>(<span class="string">"tab-graph"</span>), || MainTab::Graph(GraphTab::default())),
+<a href=#156 id=156 data-nosnippet>156</a>            ];
+<a href=#157 id=157 data-nosnippet>157</a>            <span class="kw">for </span>(name, fn_ptr) <span class="kw">in </span>panel_info.into_iter() {
+<a href=#158 id=158 data-nosnippet>158</a>                match_string.clear();
+<a href=#159 id=159 data-nosnippet>159</a>                match_string.push_str(<span class="kw-2">&amp;</span>name);
+<a href=#160 id=160 data-nosnippet>160</a>                match_string.push_str(<span class="string">" (Tab)"</span>);
+<a href=#161 id=161 data-nosnippet>161</a>                <span class="kw">if </span>!matcher.is_match(match_string.as_str()) {
+<a href=#162 id=162 data-nosnippet>162</a>                    <span class="kw">continue</span>;
+<a href=#163 id=163 data-nosnippet>163</a>                }
+<a href=#164 id=164 data-nosnippet>164</a>                matched.push((name.to_string(), MatchedType::Tab(fn_ptr)));
+<a href=#165 id=165 data-nosnippet>165</a>            }
+<a href=#166 id=166 data-nosnippet>166</a>            <span class="kw">for </span>(e, name, matched_type) <span class="kw">in </span>names {
+<a href=#167 id=167 data-nosnippet>167</a>                match_string.clear();
+<a href=#168 id=168 data-nosnippet>168</a>                <span class="kw">let </span>(matched_type, matched_str) = <span class="kw">match </span>matched_type {
+<a href=#169 id=169 data-nosnippet>169</a>                    (<span class="prelude-val">Some</span>(<span class="kw">_</span>), <span class="kw">_</span>, <span class="kw">_</span>) =&gt; (MatchedType::Trip(e), <span class="string">"trip"</span>),
+<a href=#170 id=170 data-nosnippet>170</a>                    (<span class="kw">_</span>, <span class="prelude-val">Some</span>(<span class="kw">_</span>), <span class="kw">_</span>) =&gt; (MatchedType::Station(e), <span class="string">"station"</span>),
+<a href=#171 id=171 data-nosnippet>171</a>                    (<span class="kw">_</span>, <span class="kw">_</span>, <span class="prelude-val">Some</span>(<span class="kw">_</span>)) =&gt; (MatchedType::Route(e), <span class="string">"route"</span>),
+<a href=#172 id=172 data-nosnippet>172</a>                    (<span class="prelude-val">None</span>, <span class="prelude-val">None</span>, <span class="prelude-val">None</span>) =&gt; <span class="macro">unreachable!</span>(),
+<a href=#173 id=173 data-nosnippet>173</a>                };
+<a href=#174 id=174 data-nosnippet>174</a>                match_string.push_str(name.as_str());
+<a href=#175 id=175 data-nosnippet>175</a>                match_string.push_str(<span class="string">" "</span>);
+<a href=#176 id=176 data-nosnippet>176</a>                match_string.push_str(matched_str);
+<a href=#177 id=177 data-nosnippet>177</a>                <span class="kw">if </span>!matcher.is_match(match_string.as_str()) {
+<a href=#178 id=178 data-nosnippet>178</a>                    <span class="kw">continue</span>;
+<a href=#179 id=179 data-nosnippet>179</a>                }
+<a href=#180 id=180 data-nosnippet>180</a>                matched.push((name.to_string(), matched_type));
+<a href=#181 id=181 data-nosnippet>181</a>                <span class="kw">if </span>matched.len() &gt;= <span class="number">100 </span>{
+<a href=#182 id=182 data-nosnippet>182</a>                    <span class="kw">break</span>;
+<a href=#183 id=183 data-nosnippet>183</a>                }
+<a href=#184 id=184 data-nosnippet>184</a>            }
+<a href=#185 id=185 data-nosnippet>185</a>        }
+<a href=#186 id=186 data-nosnippet>186</a>
+<a href=#187 id=187 data-nosnippet>187</a>        <span class="kw">for </span>(i, (name, matched_type)) <span class="kw">in </span>matched.iter().enumerate() {
+<a href=#188 id=188 data-nosnippet>188</a>            <span class="kw">let </span>selected = i == panel.selected_alternative;
+<a href=#189 id=189 data-nosnippet>189</a>            <span class="kw">let </span>response = ui.add_sized(
+<a href=#190 id=190 data-nosnippet>190</a>                egui::vec2(ui.available_width(), item_height),
+<a href=#191 id=191 data-nosnippet>191</a>                egui::Button::new(name).right_text(<span class="kw">match </span>matched_type {
+<a href=#192 id=192 data-nosnippet>192</a>                    MatchedType::Route(<span class="kw">_</span>) =&gt; <span class="string">"(Route)"</span>,
+<a href=#193 id=193 data-nosnippet>193</a>                    MatchedType::Station(<span class="kw">_</span>) =&gt; <span class="string">"(Station)"</span>,
+<a href=#194 id=194 data-nosnippet>194</a>                    MatchedType::Trip(<span class="kw">_</span>) =&gt; <span class="string">"(Trip)"</span>,
+<a href=#195 id=195 data-nosnippet>195</a>                    MatchedType::Tab(<span class="kw">_</span>) =&gt; <span class="string">"(Tab)"</span>,
+<a href=#196 id=196 data-nosnippet>196</a>                }),
+<a href=#197 id=197 data-nosnippet>197</a>            );
+<a href=#198 id=198 data-nosnippet>198</a>            <span class="kw">if </span>response.clicked() {
+<a href=#199 id=199 data-nosnippet>199</a>                selected_and_determined |= <span class="bool-val">true</span>;
+<a href=#200 id=200 data-nosnippet>200</a>            }
+<a href=#201 id=201 data-nosnippet>201</a>            <span class="kw">if </span>selected {
+<a href=#202 id=202 data-nosnippet>202</a>                ui.painter().rect_filled(
+<a href=#203 id=203 data-nosnippet>203</a>                    response.rect.expand(<span class="number">1.0</span>),
+<a href=#204 id=204 data-nosnippet>204</a>                    <span class="number">2</span>,
+<a href=#205 id=205 data-nosnippet>205</a>                    ui.visuals().selection.bg_fill.gamma_multiply(<span class="number">0.5</span>),
+<a href=#206 id=206 data-nosnippet>206</a>                );
+<a href=#207 id=207 data-nosnippet>207</a>
+<a href=#208 id=208 data-nosnippet>208</a>                <span class="kw">if </span>enter_pressed {
+<a href=#209 id=209 data-nosnippet>209</a>                    commands.write_message(OpenOrFocus(<span class="kw">match </span>matched_type {
+<a href=#210 id=210 data-nosnippet>210</a>                        MatchedType::Route(e) =&gt; MainTab::Diagram(DiagramTab::new(<span class="kw-2">*</span>e)),
+<a href=#211 id=211 data-nosnippet>211</a>                        MatchedType::Station(e) =&gt; MainTab::Station(StationTab::new(<span class="kw-2">*</span>e)),
+<a href=#212 id=212 data-nosnippet>212</a>                        MatchedType::Trip(e) =&gt; MainTab::Trip(TripTab::new(<span class="kw-2">*</span>e)),
+<a href=#213 id=213 data-nosnippet>213</a>                        MatchedType::Tab(f) =&gt; f(),
+<a href=#214 id=214 data-nosnippet>214</a>                    }));
+<a href=#215 id=215 data-nosnippet>215</a>                    selected_and_determined |= <span class="bool-val">true</span>;
+<a href=#216 id=216 data-nosnippet>216</a>                }
+<a href=#217 id=217 data-nosnippet>217</a>
+<a href=#218 id=218 data-nosnippet>218</a>                <span class="kw">if </span>scroll_to_selected_alternative {
+<a href=#219 id=219 data-nosnippet>219</a>                    ui.scroll_to_rect(response.rect, <span class="prelude-val">None</span>);
+<a href=#220 id=220 data-nosnippet>220</a>                }
+<a href=#221 id=221 data-nosnippet>221</a>            }
+<a href=#222 id=222 data-nosnippet>222</a>            num_alternatives += <span class="number">1</span>;
+<a href=#223 id=223 data-nosnippet>223</a>        }
+<a href=#224 id=224 data-nosnippet>224</a>
+<a href=#225 id=225 data-nosnippet>225</a>        <span class="kw">if </span>num_alternatives == <span class="number">0 </span>{
+<a href=#226 id=226 data-nosnippet>226</a>            ui.weak(<span class="string">"Nothing matched..."</span>);
+<a href=#227 id=227 data-nosnippet>227</a>        }
+<a href=#228 id=228 data-nosnippet>228</a>
+<a href=#229 id=229 data-nosnippet>229</a>        panel.selected_alternative = panel.selected_alternative.saturating_sub(
+<a href=#230 id=230 data-nosnippet>230</a>            ui.input_mut(|i| i.count_and_consume_key(Default::default(), Key::ArrowUp)),
 <a href=#231 id=231 data-nosnippet>231</a>        );
-<a href=#232 id=232 data-nosnippet>232</a>
-<a href=#233 id=233 data-nosnippet>233</a>        panel.selected_alternative = panel
-<a href=#234 id=234 data-nosnippet>234</a>            .selected_alternative
-<a href=#235 id=235 data-nosnippet>235</a>            .clamp(<span class="number">0</span>, num_alternatives.saturating_sub(<span class="number">1</span>));
-<a href=#236 id=236 data-nosnippet>236</a>
-<a href=#237 id=237 data-nosnippet>237</a>        selected_and_determined
-<a href=#238 id=238 data-nosnippet>238</a>    }
-<a href=#239 id=239 data-nosnippet>239</a>}
+<a href=#232 id=232 data-nosnippet>232</a>        panel.selected_alternative = panel.selected_alternative.saturating_add(
+<a href=#233 id=233 data-nosnippet>233</a>            ui.input_mut(|i| i.count_and_consume_key(Default::default(), Key::ArrowDown)),
+<a href=#234 id=234 data-nosnippet>234</a>        );
+<a href=#235 id=235 data-nosnippet>235</a>
+<a href=#236 id=236 data-nosnippet>236</a>        panel.selected_alternative = panel
+<a href=#237 id=237 data-nosnippet>237</a>            .selected_alternative
+<a href=#238 id=238 data-nosnippet>238</a>            .clamp(<span class="number">0</span>, num_alternatives.saturating_sub(<span class="number">1</span>));
+<a href=#239 id=239 data-nosnippet>239</a>
+<a href=#240 id=240 data-nosnippet>240</a>        selected_and_determined
+<a href=#241 id=241 data-nosnippet>241</a>    }
+<a href=#242 id=242 data-nosnippet>242</a>}
 </code></pre></div></section></main></body></html>
