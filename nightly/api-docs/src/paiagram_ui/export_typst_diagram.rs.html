@@ -3,7 +3,7 @@
 <a href=#3 id=3 data-nosnippet>3</a><span class="kw">use </span>bevy::prelude::<span class="kw-2">*</span>;
 <a href=#4 id=4 data-nosnippet>4</a><span class="kw">use </span>paiagram_core::export::ExportObject;
 <a href=#5 id=5 data-nosnippet>5</a>
-<a href=#6 id=6 data-nosnippet>6</a><span class="kw">pub struct </span>TypstModule;
+<a href=#6 id=6 data-nosnippet>6</a><span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">struct </span>TypstModule;
 <a href=#7 id=7 data-nosnippet>7</a>
 <a href=#8 id=8 data-nosnippet>8</a><span class="kw">impl </span>ExportObject <span class="kw">for </span>TypstModule {
 <a href=#9 id=9 data-nosnippet>9</a>    <span class="kw">fn </span>export_to_buffer(<span class="kw-2">&amp;mut </span><span class="self">self</span>, buffer: <span class="kw-2">&amp;mut </span>Vec&lt;u8&gt;) {
@@ -16,9 +16,9 @@
 <a href=#16 id=16 data-nosnippet>16</a>    </span>}
 <a href=#17 id=17 data-nosnippet>17</a>}
 <a href=#18 id=18 data-nosnippet>18</a>
-<a href=#19 id=19 data-nosnippet>19</a><span class="kw">pub struct </span>TypstDiagram&lt;<span class="lifetime">'a</span>&gt; {
-<a href=#20 id=20 data-nosnippet>20</a>    <span class="kw">pub </span>route_entity: Entity,
-<a href=#21 id=21 data-nosnippet>21</a>    <span class="kw">pub </span>world: <span class="kw-2">&amp;</span><span class="lifetime">'a </span><span class="kw-2">mut </span>World,
+<a href=#19 id=19 data-nosnippet>19</a><span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">struct </span>TypstDiagram&lt;<span class="lifetime">'a</span>&gt; {
+<a href=#20 id=20 data-nosnippet>20</a>    <span class="kw">pub</span>(<span class="kw">crate</span>) route_entity: Entity,
+<a href=#21 id=21 data-nosnippet>21</a>    <span class="kw">pub</span>(<span class="kw">crate</span>) world: <span class="kw-2">&amp;</span><span class="lifetime">'a </span><span class="kw-2">mut </span>World,
 <a href=#22 id=22 data-nosnippet>22</a>}
 <a href=#23 id=23 data-nosnippet>23</a>
 <a href=#24 id=24 data-nosnippet>24</a><span class="kw">impl</span>&lt;<span class="lifetime">'a</span>&gt; ExportObject <span class="kw">for </span>TypstDiagram&lt;<span class="lifetime">'a</span>&gt; {

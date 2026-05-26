@@ -16,7 +16,7 @@
 <a href=#16 id=16 data-nosnippet>16</a><span class="kw">use </span><span class="kw">crate</span>::tabs::Navigatable;
 <a href=#17 id=17 data-nosnippet>17</a>
 <a href=#18 id=18 data-nosnippet>18</a><span class="attr">#[derive(Serialize, Deserialize, MapEntities, Clone)]
-<a href=#19 id=19 data-nosnippet>19</a></span><span class="kw">pub struct </span>PriorityGraphTab {
+<a href=#19 id=19 data-nosnippet>19</a></span><span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">struct </span>PriorityGraphTab {
 <a href=#20 id=20 data-nosnippet>20</a>    <span class="attr">#[entities]
 <a href=#21 id=21 data-nosnippet>21</a>    </span>route_entity: Entity,
 <a href=#22 id=22 data-nosnippet>22</a>    navi: PriorityTabNavigation,
@@ -27,7 +27,7 @@
 <a href=#27 id=27 data-nosnippet>27</a>}
 <a href=#28 id=28 data-nosnippet>28</a>
 <a href=#29 id=29 data-nosnippet>29</a><span class="kw">impl </span>PriorityGraphTab {
-<a href=#30 id=30 data-nosnippet>30</a>    <span class="kw">pub fn </span>new(route_entity: Entity) -&gt; <span class="self">Self </span>{
+<a href=#30 id=30 data-nosnippet>30</a>    <span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">fn </span>new(route_entity: Entity) -&gt; <span class="self">Self </span>{
 <a href=#31 id=31 data-nosnippet>31</a>        <span class="self">Self </span>{
 <a href=#32 id=32 data-nosnippet>32</a>            route_entity,
 <a href=#33 id=33 data-nosnippet>33</a>            navi: PriorityTabNavigation::default(),

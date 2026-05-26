@@ -68,7 +68,7 @@
 <a href=#68 id=68 data-nosnippet>68</a>}
 <a href=#69 id=69 data-nosnippet>69</a>
 <a href=#70 id=70 data-nosnippet>70</a><span class="attr">#[derive(Serialize, Deserialize, Clone, MapEntities)]
-<a href=#71 id=71 data-nosnippet>71</a></span><span class="kw">pub struct </span>GraphTab {
+<a href=#71 id=71 data-nosnippet>71</a></span><span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">struct </span>GraphTab {
 <a href=#72 id=72 data-nosnippet>72</a>    navi: GraphNavigation,
 <a href=#73 id=73 data-nosnippet>73</a>    underlay_tile_type: underlay::UnderlayTileType,
 <a href=#74 id=74 data-nosnippet>74</a>    <span class="attr">#[serde(skip, default)]
@@ -110,7 +110,7 @@
 <a href=#110 id=110 data-nosnippet>110</a>}
 <a href=#111 id=111 data-nosnippet>111</a>
 <a href=#112 id=112 data-nosnippet>112</a><span class="attr">#[derive(Serialize, Deserialize, Clone)]
-<a href=#113 id=113 data-nosnippet>113</a></span><span class="kw">pub struct </span>GraphNavigation {
+<a href=#113 id=113 data-nosnippet>113</a></span><span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">struct </span>GraphNavigation {
 <a href=#114 id=114 data-nosnippet>114</a>    x_offset: f64,
 <a href=#115 id=115 data-nosnippet>115</a>    y_offset: f64,
 <a href=#116 id=116 data-nosnippet>116</a>    zoom: f32,
@@ -693,8 +693,8 @@
 <a href=#693 id=693 data-nosnippet>693</a>    // there is interaction i.e. maybe_interaction_pos is Some AND there aren't any
 <a href=#694 id=694 data-nosnippet>694</a>    // previously selected items AND one of the following:
 <a href=#695 id=695 data-nosnippet>695</a>    //   1. the current state is idle, OR
-<a href=#696 id=696 data-nosnippet>696</a>    //   2. the current state's items matches the pushed item's type. e.g.
-<a href=#697 id=697 data-nosnippet>697</a>    //      SelectingStations and StationSelection
+<a href=#696 id=696 data-nosnippet>696</a>    //   2. the current state's items matches the pushed item's type. e.g. SelectingStations and
+<a href=#697 id=697 data-nosnippet>697</a>    //      StationSelection
 <a href=#698 id=698 data-nosnippet>698</a>    </span><span class="kw">let </span><span class="kw-2">mut </span>selected_item: <span class="prelude-ty">Option</span>&lt;SelectedItem&gt; = <span class="prelude-val">None</span>;
 <a href=#699 id=699 data-nosnippet>699</a>    <span class="macro">macro_rules!</span> push_selected_item {
 <a href=#700 id=700 data-nosnippet>700</a>        (<span class="macro-nonterminal">$f</span>:expr, <span class="macro-nonterminal">$p</span>:pat) =&gt; {

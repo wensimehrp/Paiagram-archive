@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"fn":["apply_custom_fonts","show_ui"],"mod":["export_typst_diagram","save","tabs"],"struct":["GlobalTimer","UiPlugin"]};
+window.SIDEBAR_ITEMS = {"fn":["apply_custom_fonts","show_ui"],"struct":["UiPlugin"]};

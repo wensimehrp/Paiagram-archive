@@ -2,12 +2,12 @@
 <a href=#2 id=2 data-nosnippet>2</a><span class="kw">use </span>egui::emath::Numeric;
 <a href=#3 id=3 data-nosnippet>3</a><span class="kw">use </span>paiagram_core::units::time::{Duration, TimetableTime};
 <a href=#4 id=4 data-nosnippet>4</a>
-<a href=#5 id=5 data-nosnippet>5</a><span class="kw">pub mod </span>buttons;
-<a href=#6 id=6 data-nosnippet>6</a><span class="kw">pub mod </span>indicators;
-<a href=#7 id=7 data-nosnippet>7</a><span class="kw">pub mod </span>timetable_popup;
+<a href=#5 id=5 data-nosnippet>5</a><span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">mod </span>buttons;
+<a href=#6 id=6 data-nosnippet>6</a><span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">mod </span>indicators;
+<a href=#7 id=7 data-nosnippet>7</a><span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">mod </span>timetable_popup;
 <a href=#8 id=8 data-nosnippet>8</a>
 <a href=#9 id=9 data-nosnippet>9</a><span class="doccomment">/// [`DragValue`] for [`TimetableTime`].
-<a href=#10 id=10 data-nosnippet>10</a></span><span class="kw">pub struct </span>TimeDragValue&lt;<span class="lifetime">'a</span>&gt;(<span class="kw">pub </span><span class="kw-2">&amp;</span><span class="lifetime">'a </span><span class="kw-2">mut </span>TimetableTime);
+<a href=#10 id=10 data-nosnippet>10</a></span><span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">struct </span>TimeDragValue&lt;<span class="lifetime">'a</span>&gt;(<span class="kw">pub </span><span class="kw-2">&amp;</span><span class="lifetime">'a </span><span class="kw-2">mut </span>TimetableTime);
 <a href=#11 id=11 data-nosnippet>11</a>
 <a href=#12 id=12 data-nosnippet>12</a><span class="kw">impl</span>&lt;<span class="lifetime">'a</span>&gt; egui::Widget <span class="kw">for </span>TimeDragValue&lt;<span class="lifetime">'a</span>&gt; {
 <a href=#13 id=13 data-nosnippet>13</a>    <span class="kw">fn </span>ui(<span class="self">self</span>, ui: <span class="kw-2">&amp;mut </span>egui::Ui) -&gt; egui::Response {
@@ -30,7 +30,7 @@
 <a href=#30 id=30 data-nosnippet>30</a>}
 <a href=#31 id=31 data-nosnippet>31</a>
 <a href=#32 id=32 data-nosnippet>32</a><span class="doccomment">/// [`DragValue`] for [`TimetableTime`], in Japanese timetable style.
-<a href=#33 id=33 data-nosnippet>33</a></span><span class="kw">pub struct </span>TimeDragValueOud&lt;<span class="lifetime">'a</span>&gt;(<span class="kw">pub </span><span class="kw-2">&amp;</span><span class="lifetime">'a </span><span class="kw-2">mut </span>TimetableTime, <span class="kw">pub </span>bool);
+<a href=#33 id=33 data-nosnippet>33</a></span><span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">struct </span>TimeDragValueOud&lt;<span class="lifetime">'a</span>&gt;(<span class="kw">pub </span><span class="kw-2">&amp;</span><span class="lifetime">'a </span><span class="kw-2">mut </span>TimetableTime, <span class="kw">pub </span>bool);
 <a href=#34 id=34 data-nosnippet>34</a>
 <a href=#35 id=35 data-nosnippet>35</a><span class="kw">impl</span>&lt;<span class="lifetime">'a</span>&gt; egui::Widget <span class="kw">for </span>TimeDragValueOud&lt;<span class="lifetime">'a</span>&gt; {
 <a href=#36 id=36 data-nosnippet>36</a>    <span class="kw">fn </span>ui(<span class="self">self</span>, ui: <span class="kw-2">&amp;mut </span>egui::Ui) -&gt; egui::Response {
@@ -54,7 +54,7 @@
 <a href=#54 id=54 data-nosnippet>54</a>}
 <a href=#55 id=55 data-nosnippet>55</a>
 <a href=#56 id=56 data-nosnippet>56</a><span class="doccomment">/// [`DragValue`] for [`Duration`].
-<a href=#57 id=57 data-nosnippet>57</a></span><span class="kw">pub struct </span>DurationDragValue&lt;<span class="lifetime">'a</span>&gt;(<span class="kw">pub </span><span class="kw-2">&amp;</span><span class="lifetime">'a </span><span class="kw-2">mut </span>Duration);
+<a href=#57 id=57 data-nosnippet>57</a></span><span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">struct </span>DurationDragValue&lt;<span class="lifetime">'a</span>&gt;(<span class="kw">pub </span><span class="kw-2">&amp;</span><span class="lifetime">'a </span><span class="kw-2">mut </span>Duration);
 <a href=#58 id=58 data-nosnippet>58</a>
 <a href=#59 id=59 data-nosnippet>59</a><span class="kw">impl</span>&lt;<span class="lifetime">'a</span>&gt; egui::Widget <span class="kw">for </span>DurationDragValue&lt;<span class="lifetime">'a</span>&gt; {
 <a href=#60 id=60 data-nosnippet>60</a>    <span class="kw">fn </span>ui(<span class="self">self</span>, ui: <span class="kw-2">&amp;mut </span>egui::Ui) -&gt; egui::Response {

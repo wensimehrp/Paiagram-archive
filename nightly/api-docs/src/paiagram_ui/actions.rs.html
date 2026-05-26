@@ -55,10 +55,10 @@
 <a href=#55 id=55 data-nosnippet>55</a>    <span class="comment">// TODO: use size limitation in user settings?
 <a href=#56 id=56 data-nosnippet>56</a>    </span><span class="doccomment">/// The hard limit of the action history stack
 <a href=#57 id=57 data-nosnippet>57</a>    </span><span class="kw">const </span>SIZE: usize = <span class="number">1000</span>;
-<a href=#58 id=58 data-nosnippet>58</a>    <span class="kw">pub fn </span>can_undo(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; bool {
+<a href=#58 id=58 data-nosnippet>58</a>    <span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">fn </span>can_undo(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; bool {
 <a href=#59 id=59 data-nosnippet>59</a>        <span class="self">self</span>.ptr != <span class="number">0
 <a href=#60 id=60 data-nosnippet>60</a>    </span>}
-<a href=#61 id=61 data-nosnippet>61</a>    <span class="kw">pub fn </span>can_redo(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; bool {
+<a href=#61 id=61 data-nosnippet>61</a>    <span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">fn </span>can_redo(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; bool {
 <a href=#62 id=62 data-nosnippet>62</a>        <span class="self">self</span>.ptr &lt; <span class="self">self</span>.history.len()
 <a href=#63 id=63 data-nosnippet>63</a>    }
 <a href=#64 id=64 data-nosnippet>64</a>    <span class="doccomment">/// Add a variant of [`RevertableActions`] to the action queue

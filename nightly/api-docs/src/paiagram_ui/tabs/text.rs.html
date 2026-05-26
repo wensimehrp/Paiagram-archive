@@ -23,7 +23,7 @@
 <a href=#23 id=23 data-nosnippet>23</a><span class="attr">#[derive(MapEntities, Clone, Copy, serde::Serialize, serde::Deserialize)]
 <a href=#24 id=24 data-nosnippet>24</a></span><span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">struct </span>TextTab {
 <a href=#25 id=25 data-nosnippet>25</a>    <span class="attr">#[entities]
-<a href=#26 id=26 data-nosnippet>26</a>    </span><span class="kw">pub </span>entity: <span class="prelude-ty">Option</span>&lt;Entity&gt;,
+<a href=#26 id=26 data-nosnippet>26</a>    </span><span class="kw">pub</span>(<span class="kw">crate</span>) entity: <span class="prelude-ty">Option</span>&lt;Entity&gt;,
 <a href=#27 id=27 data-nosnippet>27</a>    <span class="attr">#[serde(skip, default)]
 <a href=#28 id=28 data-nosnippet>28</a>    </span>editing: bool,
 <a href=#29 id=29 data-nosnippet>29</a>}
@@ -35,7 +35,7 @@
 <a href=#35 id=35 data-nosnippet>35</a>}
 <a href=#36 id=36 data-nosnippet>36</a>
 <a href=#37 id=37 data-nosnippet>37</a><span class="kw">impl </span>TextTab {
-<a href=#38 id=38 data-nosnippet>38</a>    <span class="kw">pub fn </span>new(entity: <span class="prelude-ty">Option</span>&lt;Entity&gt;) -&gt; <span class="self">Self </span>{
+<a href=#38 id=38 data-nosnippet>38</a>    <span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">fn </span>new(entity: <span class="prelude-ty">Option</span>&lt;Entity&gt;) -&gt; <span class="self">Self </span>{
 <a href=#39 id=39 data-nosnippet>39</a>        <span class="self">Self </span>{
 <a href=#40 id=40 data-nosnippet>40</a>            entity,
 <a href=#41 id=41 data-nosnippet>41</a>            editing: <span class="bool-val">false</span>,
