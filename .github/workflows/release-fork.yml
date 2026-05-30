@@ -1,0 +1,85 @@
+name: Fork Release Archive
+
+on:
+  release:
+    types:
+      - published
+
+concurrency:
+  group: release-fork-${{ github.event.release.tag_name }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  fork-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - name: Locate sample.paia asset
+        id: sample
+        run: |
+          set -euo pipefail
+          asset_url="$(jq -r '.release.assets[]? | select(.name=="sample.paia") | .url' "$GITHUB_EVENT_PATH")"
+          if [[ -n "${asset_url}" ]]; then
+            echo "found=true" >> "$GITHUB_OUTPUT"
+            echo "asset_url=${asset_url}" >> "$GITHUB_OUTPUT"
+          else
+            echo "found=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Download sample.paia
+        if: steps.sample.outputs.found == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          curl -L \
+            -u "x-access-token:${GITHUB_TOKEN}" \
+            -H "Accept: application/octet-stream" \
+            "${{ steps.sample.outputs.asset_url }}" \
+            -o /tmp/sample.paia
+
+      - name: Run fork script
+        env:
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+        run: |
+          set -euo pipefail
+          if [[ "${{ steps.sample.outputs.found }}" == "true" ]]; then
+            ./fork /tmp/sample.paia "${RELEASE_TAG}"
+          else
+            ./fork "" "${RELEASE_TAG}"
+          fi
+
+      - name: Commit release archive
+        env:
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo "No release archive changes to commit."
+            exit 0
+          fi
+
+          git commit -m "archive: add release ${RELEASE_TAG}"
+
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            if (( attempt == 3 )); then
+              echo "Failed to push release archive commit after retries."
+              exit 1
+            fi
+            git fetch origin main
+            git rebase origin/main || { echo "Rebase failed."; exit 1; }
+          done
