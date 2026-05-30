@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"struct":["AllTripsDisplayMode","AutoUpdateLength","Route","RouteByDirectionTrips","RouteDisplayModes","RoutePlugin","RouteTrips","SortRouteByDirectionTrips"]};

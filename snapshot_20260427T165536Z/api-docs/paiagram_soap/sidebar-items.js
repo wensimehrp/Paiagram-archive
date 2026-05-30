@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["soap_pre","soap_solve"],"trait":["HasXY"]};

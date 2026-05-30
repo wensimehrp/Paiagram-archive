@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["AntialiasingMode","LevelOfDetailMode"],"struct":["ProjectSettings","SettingsPlugin","UserPreferences"]};
