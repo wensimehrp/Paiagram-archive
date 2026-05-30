@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The Tiling System</title>
-    <link rel="canonical" href="https://paiagram.com/docs/panels/index.html">
+    <title>Station</title>
+    <link rel="canonical" href="https://paiagram.com/docs/panels/station.html">
     <meta name="description" content="...">
     <link rel="stylesheet" href="/docs/styles.css">
     <script defer src="https://cloud.umami.is/script.js" data-website-id="067cd05f-b395-4813-916c-2063c383685f">
@@ -13,18 +13,18 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=STIX+Two+Math&display=swap');
     </style>
-    <meta property="og:title" content="The Tiling System">
+    <meta property="og:title" content="Station">
     <meta property="og:description" content="…">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://paiagram.com/docs/panels/index.html">
+    <meta property="og:url" content="https://paiagram.com/docs/panels/station.html">
     <meta property="og:site_name" content="Paiagram 0.1.0 Documentation">
-    <meta property="og:image" content="https://paiagram.com/docs/panels/index_summary.png">
+    <meta property="og:image" content="https://paiagram.com/docs/panels/station_summary.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://paiagram.com/docs/panels/index_summary.png">
-    <meta name="twitter:title" content="The Tiling System">
+    <meta name="twitter:image" content="https://paiagram.com/docs/panels/station_summary.png">
+    <meta name="twitter:title" content="Station">
     <meta name="twitter:domain" content="paiagram.com">
     <meta name="twitter:description" content="...">
   </head>
@@ -55,9 +55,8 @@
             <h2>User Interface</h2>
           </div>
         </div>
-        <div class="w-full relative border-y border-neutral-300 ">
-          <div class="bg-white [&amp;>a]:block [&amp;>a]:w-full [&amp;>a]:px-2 [&amp;>a]:py-1 [&amp;>a]:hover:bg-neutral-200"><a href="#">The Tiling System</a></div>
-          <div class=" border-t border-neutral-300 bg-white [&amp;>a]:px-2 [&amp;>a]:py-1 [&amp;>a]:block [&amp;>a]:hover:bg-neutral-200"><a href="#loc-1">The Tiling System</a><a href="#loc-2">Commands Panel</a><a href="#loc-3">Assistance Panel / Right Panel</a></div>
+        <div class="w-full relative">
+          <div class="[&amp;>a]:block [&amp;>a]:w-full [&amp;>a]:px-2 [&amp;>a]:py-1 [&amp;>a]:hover:bg-neutral-200"><a href="index.html">The Tiling System</a></div>
         </div>
         <div class="w-full relative">
           <div class="[&amp;>a]:block [&amp;>a]:w-full [&amp;>a]:px-2 [&amp;>a]:py-1 [&amp;>a]:hover:bg-neutral-200"><a href="diagram.html">Diagram</a></div>
@@ -65,8 +64,8 @@
         <div class="w-full relative">
           <div class="[&amp;>a]:block [&amp;>a]:w-full [&amp;>a]:px-2 [&amp;>a]:py-1 [&amp;>a]:hover:bg-neutral-200"><a href="map.html">Map</a></div>
         </div>
-        <div class="w-full relative">
-          <div class="[&amp;>a]:block [&amp;>a]:w-full [&amp;>a]:px-2 [&amp;>a]:py-1 [&amp;>a]:hover:bg-neutral-200"><a href="station.html">Station</a></div>
+        <div class="w-full relative border-y border-neutral-300 ">
+          <div class="bg-white [&amp;>a]:block [&amp;>a]:w-full [&amp;>a]:px-2 [&amp;>a]:py-1 [&amp;>a]:hover:bg-neutral-200"><a href="#">Station</a></div>
         </div>
         <div class="w-full relative">
           <div class="p-2 font-bold">
@@ -114,75 +113,11 @@
       </div>
     </nav>
     <article class="p-3 sm:p-6 md:p-8 max-w-[52rem] md:ml-72 prose prose-neutral leading-normal prose-pre:bg-neutral-100 prose-pre:text-neutral-900 prose-pre:rounded-none">
-      <h1>The Tiling System</h1>
-      <p>Paiagram features a tiling system that allows you to conveniently split and organize your workspace.</p>
-      <h2 id="loc-1">The Tiling System</h2>
-      <p>The tiling system allows you to group multiple tabs or tab groups together. You can horizontally or vertically split your workspace into many parts to quickly switch between tasks.</p>
-      <h2 id="loc-2">Commands Panel</h2>
-      <p>You can use the shortcut <code>Ctrl+P</code> to open the command panel, and quickly open tabs from the command panel. You can search up station, route, and trip names from the command panel to quickly open station, route, and trip tabs.</p>
-      <h3>Searching Chinese and Japanese Names with Pinyin and Romaji</h3>
-      <p>You can also search Chinese and Japanese with Pinyin, Pinyin acronyms, Double Pinyin, and Hepburn–style Romaji. For example, all of those queries would match “北京西”:</p>
-      <table>
-        <tr>
-          <td><code>beijingxi</code></td>
-          <td>Pinyin</td>
-        </tr>
-        <tr>
-          <td><code>bjx</code></td>
-          <td>Pinyin acronym</td>
-        </tr>
-        <tr>
-          <td><code>bzj;xi</code></td>
-          <td>Microsoft Double Pinyin</td>
-        </tr>
-        <tr>
-          <td><code>pekinnishi</code></td>
-          <td>Romaji</td>
-        </tr>
-        <tr>
-          <td><code>pekin</code></td>
-          <td>Romaji</td>
-        </tr>
-      </table>
-      <p>And all of those would match “山手線”:</p>
-      <table>
-        <tr>
-          <td><code>shanshouxian</code></td>
-          <td>Pinyin</td>
-        </tr>
-        <tr>
-          <td><code>ssx</code></td>
-          <td>Pinyin acronym</td>
-        </tr>
-        <tr>
-          <td><code>ujubxm</code></td>
-          <td>Microsoft Double Pinyin</td>
-        </tr>
-        <tr>
-          <td><code>yamate</code></td>
-          <td>Romaji</td>
-        </tr>
-        <tr>
-          <td><code>yamatesen</code></td>
-          <td>Romaji</td>
-        </tr>
-        <tr>
-          <td><code>yamanotesen</code></td>
-          <td>Romaji</td>
-        </tr>
-      </table>
-      <p>Please note that the Romaji matcher has its limitations. There are so many readings for the same character, and the system may fail when processing some specific character combinations. For example, <code>kasuga</code> could not match “春日”, and <code>haneda</code> won’t match “羽田” (although in this case you could enter <code>haneten</code> instead).</p>
-      <p>This feature is supported by <a href="https://github.com/Chaoses-Ib/ib-matcher">the IB Matcher</a>. If you like this feature, consider giving the author a star on GitHub!</p>
-      <h2 id="loc-3">Assistance Panel / Right Panel</h2>
-      <p>The right panel provides functions to edit your work and extra data that may help you analyzing your network and timetable.</p>
-      <p>The assistance panel contains three tabs: Edit, Properties, and Export</p>
-      <h3>“Edit” Tab</h3>
-      <h3>“Properties” Tab</h3>
-      <h3>“Export” Tab</h3>
-      <p>You can use the Export tab to export the current tab’s information.</p>
+      <h1>Station</h1>
+      <p>The<span style="white-space: pre-wrap">&#x20;</span><strong><i class="inline-flex -translate-y-[0.1em] ph-bold ph-building-apartment"></i> station panel</strong> provides a station overview, including the<span style="white-space: pre-wrap">&#x20;</span><a href="../model/trips-vehicles.html#trips"><i class="inline-flex -translate-y-[0.1em] ph-bold ph-train"></i> trips</a> passing the station, how many trips are passing the station. You can filter trips by stop condition and trip travel direction.</p>
       <footer class="mt-8 grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
-        <div class="[&amp;>a]:no-underline border-1 border-neutral-300 hover:bg-neutral-100 hover:shadow-xs [&amp;>a]:block [&amp;>a]:w-full [&amp;>a]:h-full [&amp;>a]:p-4 "><a href="../model/trips-vehicles.html">Trips and Vehicles</a></div>
-        <div class="md:col-start-2 text-right [&amp;>a]:no-underline border-1 border-neutral-300 hover:bg-neutral-100 hover:shadow-xs [&amp;>a]:block [&amp;>a]:w-full [&amp;>a]:h-full [&amp;>a]:p-4 "><a href="diagram.html">Diagram</a></div>
+        <div class="[&amp;>a]:no-underline border-1 border-neutral-300 hover:bg-neutral-100 hover:shadow-xs [&amp;>a]:block [&amp;>a]:w-full [&amp;>a]:h-full [&amp;>a]:p-4 "><a href="map.html">Map</a></div>
+        <div class="md:col-start-2 text-right [&amp;>a]:no-underline border-1 border-neutral-300 hover:bg-neutral-100 hover:shadow-xs [&amp;>a]:block [&amp;>a]:w-full [&amp;>a]:h-full [&amp;>a]:p-4 "><a href="../import/qetrc.html">Importing qETRC/pyETRC</a></div>
         <span class="md:col-span-2 text-xs text-center">Powered by <a href="https://github.com/wensimehrp/otter-docs">Otter Docs</a>. Made in Vancouver with love.</span>
       </footer>
     </article>

@@ -926,6 +926,10 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
   display: grid;
 }
 
+.inline-flex {
+  display: inline-flex;
+}
+
 .h-\[1px\] {
   height: 1px;
 }
@@ -948,6 +952,11 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
 
 .-translate-x-full {
   --en-translate-x: -100%;
+  transform: translate3d(var(--en-translate-x), var(--en-translate-y), var(--en-translate-z)) rotateX(var(--en-rotate-x)) rotateY(var(--en-rotate-y)) rotateZ(var(--en-rotate-z)) skewX(var(--en-skew-x)) skewY(var(--en-skew-y)) scale3d(var(--en-scale-x), var(--en-scale-y), var(--en-scale-z));
+}
+
+.-translate-y-\[0\.1em\] {
+  --en-translate-y: 0.1em;
   transform: translate3d(var(--en-translate-x), var(--en-translate-y), var(--en-translate-z)) rotateX(var(--en-rotate-x)) rotateY(var(--en-rotate-y)) rotateZ(var(--en-rotate-z)) skewX(var(--en-skew-x)) skewY(var(--en-skew-y)) scale3d(var(--en-scale-x), var(--en-scale-y), var(--en-scale-z));
 }
 
