@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"fn":["add_entries","recalculate_route"],"struct":["AddEntryToTrip","RoutingPlugin"]};
+window.SIDEBAR_ITEMS = {"enum":["UnwindParams"],"fn":["add_entries","recalculate_estimate","recalculate_inner","recalculate_route"],"struct":["AddEntryToTrip","RoutingPlugin"]};

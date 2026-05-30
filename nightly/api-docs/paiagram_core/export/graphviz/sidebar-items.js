@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"struct":["Graphviz"]};
+window.SIDEBAR_ITEMS = {"fn":["make_dot_string"],"struct":["Graphviz"]};

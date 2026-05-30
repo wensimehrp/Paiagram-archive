@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"struct":["OuDia"]};
+window.SIDEBAR_ITEMS = {"fn":["make_classes","make_diagram","make_disp_prop","make_stations","make_trainset_by_direction","split_first_middle_last"],"struct":["OuDia"]};

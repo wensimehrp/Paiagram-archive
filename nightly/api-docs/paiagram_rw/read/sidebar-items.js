@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"struct":["ReadFile","ReadPlugin"],"type":["CallbackFn"]};
+window.SIDEBAR_ITEMS = {"fn":["dialog","poll"],"struct":["ReadFile","ReadPlugin","SelectedFile"],"type":["CallbackFn"]};
