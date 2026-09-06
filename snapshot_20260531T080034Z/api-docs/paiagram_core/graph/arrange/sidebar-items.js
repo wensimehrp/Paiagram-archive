@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["GraphLayoutKind"],"fn":["apply_force_directed_layout","apply_graph_layout_task","arrange_via_osm","auto_arrange_graph","best_name_match","escape_overpass_regex","fill_unmatched_via_neighbors","name_tag_weight","station_kind_weight"],"struct":["GraphLayoutTask","OSMCenter","OSMElement","OSMResponse"]};

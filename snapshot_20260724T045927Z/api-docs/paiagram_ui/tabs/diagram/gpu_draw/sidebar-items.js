@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["COMPUTE_WORKGROUP_SIZE","STYLE_TABLE_CAPACITY"],"fn":["make_storage_buffer_entry","pack_style","paint_callback","rewrite_trip_cache","upload_trip_strokes"],"struct":["DrawIndirectArgs","Entry","GpuSegment","GpuTripRendererState","GpuUniforms","TripCallback","TripRenderResourceMap","TripRenderResources","Uniforms"]};
