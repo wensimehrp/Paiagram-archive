@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["DisplayedColor","PredefinedColor"],"fn":["color_button","translate_srgba_to_color32"]};

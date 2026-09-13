@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["RevertableActions"],"macro":["for_all_actions"],"mod":["change_entry_mode"],"struct":["ActionHistory","ActionsPlugin"],"trait":["RevertableAction"]};

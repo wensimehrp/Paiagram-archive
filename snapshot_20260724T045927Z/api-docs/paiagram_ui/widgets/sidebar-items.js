@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["buttons","indicators","timetable_popup"],"struct":["DurationDragValue","TimeDragValue","TimeDragValueOud"]};

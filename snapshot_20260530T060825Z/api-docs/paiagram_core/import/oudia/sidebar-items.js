@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["convert_timetable_entry","load_oud"],"struct":["TimetableEntry"]};
