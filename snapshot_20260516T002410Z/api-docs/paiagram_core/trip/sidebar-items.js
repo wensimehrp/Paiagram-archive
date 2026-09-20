@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["class","routing"],"struct":["ConvertDerivedEntryToExplicit","IsTimingReference","Trip","TripBundle","TripClass","TripNominalSchedule","TripPlugin","TripQuery","TripQueryItem","TripSchedule","TripSpatialIndex","TripSpatialIndexItem","TripVehicles"]};

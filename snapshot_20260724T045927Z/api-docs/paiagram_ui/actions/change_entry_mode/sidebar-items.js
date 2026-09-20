@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["ChangeEntryMode"],"fn":["watch_entry_mode_changes"],"struct":["ChangeEntryModeInner"]};
