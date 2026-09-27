@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["add_entries","recalculate_route"],"struct":["AddEntryToTrip","RoutingPlugin"]};

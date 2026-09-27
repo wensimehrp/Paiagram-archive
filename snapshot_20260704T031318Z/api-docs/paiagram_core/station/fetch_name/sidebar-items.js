@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["fetch_station_name"],"struct":["FetchNamePlugin","OSMCenter","OSMResponse","OSMResponseInner","StationNamePending"]};

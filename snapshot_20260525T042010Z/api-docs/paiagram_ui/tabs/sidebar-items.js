@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["all_tabs"],"trait":["Navigatable","Tab"]};
