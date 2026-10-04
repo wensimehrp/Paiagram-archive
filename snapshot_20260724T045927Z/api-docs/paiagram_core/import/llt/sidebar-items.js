@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["StopType"],"fn":["load_llt"],"struct":["Line","LineStation","TimetableData","Train","TrainStop"]};

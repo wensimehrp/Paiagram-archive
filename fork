@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# fork.sh: fork the current nightly
+FOLDER=${2:-$(date --iso-8601)}
+# make the contents
+cp -r nightly "$FOLDER"
+cp "$1" "$FOLDER/example.paia" || echo "NO EXAMPLE FILE PROVIDED"
+rm -rf "$FOLDER/api-docs"
+echo "/demo /$FOLDER/?open=example.paia 302" > main-extra/_redirects
