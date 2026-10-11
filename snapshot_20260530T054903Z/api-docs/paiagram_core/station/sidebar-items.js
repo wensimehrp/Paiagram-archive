@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["CreateNewStation","IsDepot","IsExternalStation","ParentStationOrStation","ParentStationOrStationItem","Platform","PlatformEntries","PlatformQuery","PlatformQueryItem","Station","StationBundle","StationNamePending","StationPlugin","StationQuery","StationQueryItem"],"type":["Platforms","StationEntries"]};
