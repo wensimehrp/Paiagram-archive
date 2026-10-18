@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["MatchedType"],"static":["PINYIN_MATCH_DATA","ROMAJI_MATCH_DATA"],"struct":["CommandPalette"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["BUTTON_SIZE","POPUP_WIDTH"],"fn":["arrival_popup","arrival_popup_inner","departure_popup","departure_popup_inner","shift_at_value","shift_for_value"]};
