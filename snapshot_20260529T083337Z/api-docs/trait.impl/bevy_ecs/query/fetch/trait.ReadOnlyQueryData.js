@@ -1,0 +1,9 @@
+(function() {
+    const implementors = Object.fromEntries([["paiagram_core",[["impl ReadOnlyQueryData for <a class=\"struct\" href=\"paiagram_core/entry/struct.EntryQuery.html\" title=\"struct paiagram_core::entry::EntryQuery\">EntryQuery</a>",0],["impl ReadOnlyQueryData for <a class=\"struct\" href=\"paiagram_core/interval/struct.IntervalQuery.html\" title=\"struct paiagram_core::interval::IntervalQuery\">IntervalQuery</a>",0],["impl ReadOnlyQueryData for <a class=\"struct\" href=\"paiagram_core/station/struct.ParentStationOrStation.html\" title=\"struct paiagram_core::station::ParentStationOrStation\">ParentStationOrStation</a>",0],["impl ReadOnlyQueryData for <a class=\"struct\" href=\"paiagram_core/station/struct.PlatformQuery.html\" title=\"struct paiagram_core::station::PlatformQuery\">PlatformQuery</a>",0],["impl ReadOnlyQueryData for <a class=\"struct\" href=\"paiagram_core/station/struct.StationQuery.html\" title=\"struct paiagram_core::station::StationQuery\">StationQuery</a>",0],["impl ReadOnlyQueryData for <a class=\"struct\" href=\"paiagram_core/trip/class/struct.ClassQuery.html\" title=\"struct paiagram_core::trip::class::ClassQuery\">ClassQuery</a>",0],["impl ReadOnlyQueryData for <a class=\"struct\" href=\"paiagram_core/trip/struct.TripQuery.html\" title=\"struct paiagram_core::trip::TripQuery\">TripQuery</a>",0],["impl ReadOnlyQueryData for <a class=\"struct\" href=\"paiagram_core/vehicle/struct.VehicleQuery.html\" title=\"struct paiagram_core::vehicle::VehicleQuery\">VehicleQuery</a>",0]]]]);
+    if (window.register_implementors) {
+        window.register_implementors(implementors);
+    } else {
+        window.pending_implementors = implementors;
+    }
+})()
+//{"start":59,"fragment_lengths":[1473]}
