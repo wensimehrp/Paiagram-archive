@@ -4,7 +4,7 @@ File archive for <https://paiagram.com>. This repository is a deployment reposit
 It contains the data for legacy versions, redirection definitions, documentation, the main site,
 and so on and so forth.
 
-# Organization and Deployment
+## Organization and Deployment
 
 Some folders are special:
 
@@ -16,7 +16,7 @@ Other folders will be deployed as-is.
 
 The contents in the workspace root will be first cleared during a deployment.
 
-# Snapshotting
+## Snapshotting
 
 Paiagram has a lot of snapshot versions. Each snapshot version will create a new snapshot folder
 in the form of `snapshots/YYYYMMDDHHMMSSZ` (UTC), e.g. `snapshots/20261101223742Z`. In addition,
@@ -30,6 +30,6 @@ will be deleted.
 not be deployed. The content of `new-snapshot` will be moved to `snapshots/YYYYMMDDHHMMSSZ` and
 commited.
 
-# Pruning
+## Pruning
 
 The repository is pruned weekly. All Git history will be removed.
