@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="en"><head><link rel="stylesheet" href="main-styles.css"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiID8+CjwhLS0gQnJvd3NlciBpY29uIC0tPgo8c3ZnCiAgICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgICB3aWR0aD0iNTEyIgogICAgaGVpZ2h0PSI1MTIiCiAgICB2aWV3Qm94PSIzLjUgMy41IDE3IDE3Igo+CiAgICA8c3R5bGU+CiAgICAgICAgZyB7CiAgICAgICAgICAgIHN0cm9rZTogIzAwMDsgLyogZGVmYXVsdCAobGlnaHQgdGhlbWUpICovCiAgICAgICAgfQogICAgICAgIEBtZWRpYSAocHJlZmVycy1jb2xvci1zY2hlbWU6IGRhcmspIHsKICAgICAgICAgICAgZyB7CiAgICAgICAgICAgICAgICBzdHJva2U6ICNmZmY7IC8qIGRhcmsgdGhlbWUgKi8KICAgICAgICAgICAgfQogICAgICAgIH0KICAgIDwvc3R5bGU+CiAgICA8ZwogICAgICAgIGZpbGw9Im5vbmUiCiAgICAgICAgc3Ryb2tlLXdpZHRoPSIxLjIiCiAgICAgICAgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSIKICAgICAgICBzdHJva2UtbGluZWpvaW49Im1pdGVyIgogICAgPgogICAgICAgIDxwYXRoIGQ9Ik0gMTAuNSA0LjUgTCAxNi41IDE2LjUiIC8+CiAgICAgICAgPHBhdGggZD0iTSA2LjUgNi41IEwgMTEuNSAxNi41IiAvPgogICAgICAgIDxwYXRoIGQ9Ik0gNC41IDkuNSBMIDEwLjUgOS41IiAvPgogICAgICAgIDxwYXRoIGQ9Ik0gOS41IDYuNSBMIDE1LjUgMTguNSIgLz4KICAgICAgICA8cGF0aCBkPSJNIDE1LjUgMTMuNSBMIDE5LjUgMTMuNSIgLz4KICAgICAgICA8cGF0aCBkPSJNIDE0LjUgMTEuNSBMIDE1LjUgMTEuNSBMIDE5LjUgOS41IiAvPgogICAgICAgIDxwYXRoIGQ9Ik0gMTEuNSAxMS41IEwgMTAuNSAxMS41IEwgNC41IDE0LjUiIC8+CiAgICAgICAgPHBhdGggZD0iTSAxMy41IDkuNSBMIDE0IDkuNSIgLz4KICAgICAgICA8cGF0aCBkPSJNIDEyLjUgMTMuNSBMIDEyIDEzLjUiIC8+CiAgICA8L2c+Cjwvc3ZnPgo="><title>Paiagram</title><style>@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+:root {
+  font-family: "Lato";
+}</style><style>/* Alignment */
+mtable.right-align mtd,
+mtable mtd.right-align,
+mtable.left-align mtd.right-align,
+mtable.aligned mtd:nth-child(odd) {
+  justify-items: end;
+  text-align: right;
+}
+mtable.cases mtd,
+mtable.left-align mtd,
+mtable mtd.left-align,
+mtable.aligned mtd:nth-child(even),
+math:is(:not([display])) > mtable.multiline-equation mtd {
+  justify-items: start;
+  text-align: left;
+}
+mtable.cases mtd,
+mtable.aligned mtd,
+mtable mtd.flushed,
+mtable mtd.left-flush {
+  padding-left: 0;
+}
+mtable.cases mtd,
+mtable.aligned mtd,
+mtable mtd.flushed,
+mtable mtd.right-flush {
+  padding-right: 0;
+}
+
+/* Tables */
+mtable {
+  math-style: inherit;
+}
+mtd {
+  math-depth: auto-add;
+  math-style: compact;
+  math-shift: compact;
+}
+
+/* Equations */
+mtable.multiline-equation mtd {
+  math-depth: inherit;
+  math-style: inherit;
+  math-shift: inherit;
+  padding: 0;
+}
+math > mtable.multiline-equation mtr:not(:last-child) mtd {
+  padding-bottom: 0.5em;
+}
+
+/* Fractions */
+mfrac {
+  padding-inline: 0;
+  margin-inline: 0.1em;
+}
+
+/* Accents */
+mover[accent="true" i] > :first-child {
+  font-feature-settings: "dtls";
+}
+mover.dotted[accent="true" i] > :first-child {
+  font-feature-settings: "dtls" 0;
+}
+
+/* Other rules for scriptlevel, displaystyle and math-shift */
+munder > :nth-child(2),
+munderover > :nth-child(2) {
+  math-shift: compact
+}
+munder[accentunder="true" i] > :not(:first-child),
+mover[accent="true" i] > :not(:first-child) {
+  math-depth: inherit;
+  math-style: inherit;
+  math-shift: inherit;
+}</style></head><body class="bg-white dark:bg-zinc-900"><section class="w-full p-5 -z-50 bg-emerald-700 dark:bg-emerald-900"><div class="mx-auto flex flex-col md:grid md:grid-cols-[0.7fr_1fr] text-white gap-10 p-5 md:p-10 max-w-6xl"><div class="text-5xl md:text-6xl font-bold flex flex-col justify-center gap-3"><span class="text-shadow-sm">Marey charts, reimagined.</span> <a class="py-3 px-6 bg-gray-300/50 rounded-sm backdrop-blur-sm text-2xl w-full shadow-sm hover:shadow-lg hover:bg-black/30 transition-all flex flex-col [&amp;>small]:text-sm" href="./latest-snapshot"><span>Try it Online</span><small>Run the latest version</small></a> <a class="py-3 px-6 bg-gray-300/50 rounded-sm backdrop-blur-sm text-2xl w-full shadow-sm hover:shadow-lg hover:bg-black/30 transition-all flex flex-col [&amp;>small]:text-sm" href="docs/index.html"><span>Read the Docs</span><small>Read the online documentation</small></a> <a class="py-3 px-6 bg-gray-300/50 rounded-sm backdrop-blur-sm text-2xl w-full shadow-sm hover:shadow-lg hover:bg-black/30 transition-all flex flex-col [&amp;>small]:text-sm" href="https://github.com/wensimehrp/Paiagram"><span>Repository</span><small>Browse the source and talk about Paiagram</small></a></div><div class="flex justify-center items-center"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiID8+CjwhLS0gTm9ybWFsIGljb24gLS0+CjxzdmcKICAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgIHdpZHRoPSI1MTIiCiAgICBoZWlnaHQ9IjUxMiIKICAgIHZpZXdCb3g9IjMuNSAzLjUgMTcgMTciCj4KICAgIDxnCiAgICAgICAgZmlsbD0ibm9uZSIKICAgICAgICBzdHJva2U9IiNmZmYiCiAgICAgICAgc3Ryb2tlLXdpZHRoPSIxLjMiCiAgICAgICAgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSIKICAgICAgICBzdHJva2UtbGluZWpvaW49Im1pdGVyIgogICAgPgogICAgICAgIDxwYXRoIGQ9Ik0gMTAuNSA0LjUgTCAxNi41IDE2LjUiIC8+CiAgICAgICAgPHBhdGggZD0iTSA2LjUgNi41IEwgMTEuNSAxNi41IiAvPgogICAgICAgIDxwYXRoIGQ9Ik0gNC41IDkuNSBMIDEwLjUgOS41IiAvPgogICAgICAgIDxwYXRoIGQ9Ik0gOS41IDYuNSBMIDE1LjUgMTguNSIgLz4KICAgICAgICA8cGF0aCBkPSJNIDE1LjUgMTMuNSBMIDE5LjUgMTMuNSIgLz4KICAgICAgICA8cGF0aCBkPSJNIDE0LjUgMTEuNSBMIDE1LjUgMTEuNSBMIDE5LjUgOS41IiAvPgogICAgICAgIDxwYXRoIGQ9Ik0gMTEuNSAxMS41IEwgMTAuNSAxMS41IEwgNC41IDE0LjUiIC8+CiAgICAgICAgPHBhdGggZD0iTSAxMy41IDkuNSBMIDE0IDkuNSIgLz4KICAgICAgICA8cGF0aCBkPSJNIDEyLjUgMTMuNSBMIDEyIDEzLjUiIC8+CiAgICA8L2c+Cjwvc3ZnPgo=" width="512" height="512" style="display: block"></div></div></section><article class="prose prose-zinc dark:prose-invert mx-auto my-10 max-w-3xl p-5 md:p-10"><h2>Features</h2><ul><li>Graph single, double, triple, and quadruple track routes on your chart. In fact, there isn’t a limit at all!</li><li>Create diagrams from arbitrary nodes. The program handles it. Don’t worry. Your vehicle data is not tied to the diagram.</li><li>Translations! You can use the app in Klingon if you wish to. You’d need to translate it first, obviously.</li><li>Try it on the web! You can download the app bundle and use it directly in your browser without installation. It works completely offline!</li><li>You can also import <a href="docs/import/oudia.html#import-oudia">OuDiaSecond</a>, <a href="docs/import/qetrc.html#import-qetrc">qETRC/pyETRC</a>, and <a href="docs/import/gtfs.html#import-gtfs">GTFS</a> diagrams using the built-in import feature.</li></ul><h2>License</h2><p>Paiagram is released under <a href="docs/license.html#software-license">Mozilla Public License, Version 2.0.</a></p><h2>Translation Status</h2><p><a href="https://hosted.weblate.org/engage/paiagram/"><img src="https://hosted.weblate.org/widget/paiagram/paiagram-app/multi-auto.svg"></a></p></article></body></html>
