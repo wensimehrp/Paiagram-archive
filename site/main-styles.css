@@ -937,6 +937,10 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
   max-width: 64rem;
 }
 
+.max-w-6xl {
+  max-width: 72rem;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -951,10 +955,6 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
 
 .flex-wrap {
   flex-wrap: wrap;
-}
-
-.items-center {
-  align-items: center;
 }
 
 .justify-between {
