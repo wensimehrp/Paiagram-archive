@@ -24,16 +24,18 @@ def main() -> None:
     incoming.rename(snapshot)
     print(f"Archived snapshot {snapshot}.")
 
-    redirects = Path("http_config/_redirects")
-    lines = redirects.read_text().splitlines()
-    redirect = f"/latest-snapshot /{snapshot}/ 302"
-    for index, line in enumerate(lines):
-        if line.startswith("/latest-snapshot"):
-            lines[index] = redirect
-            break
-    else:
-        lines.append(redirect)
-    redirects.write_text("\n".join(lines) + "\n")
+    redirects_path = Path("http_config/_redirects")
+    redirects = {
+        line.split()[0]: line.split()[1]
+        for line in Path("http_config/_redirects").read_text().splitlines()
+    }
+    redirects["/latest-snapshot"] = f"{snapshot}"
+    redirects["/latest-snapshot/"] = f"{snapshot}/docs/"
+    redirects["/latest-snapshot"] = f"{snapshot}/docs/"
+    redirects["/latest-snapshot/"] = f"{snapshot}/docs/"
+    redirects_path.write_text(
+        "\n".join([f"{key} {val} 302" for key, val in redirects.items()]) + "\n"
+    )
 
     old_snapshots = sorted(
         (entry for entry in snapshot.parent.iterdir() if entry.is_dir()), reverse=True
