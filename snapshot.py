@@ -30,9 +30,9 @@ def main() -> None:
         for line in Path("http_config/_redirects").read_text().splitlines()
     }
     redirects["/latest-snapshot"] = f"{snapshot}"
-    redirects["/latest-snapshot/"] = f"{snapshot}/docs/"
-    redirects["/latest-snapshot"] = f"{snapshot}/docs/"
-    redirects["/latest-snapshot/"] = f"{snapshot}/docs/"
+    redirects["/latest-snapshot/"] = f"{snapshot}"
+    redirects["/latest-snapshot/docs"] = f"{snapshot}/docs/"
+    redirects["/latest-snapshot/docs/"] = f"{snapshot}/docs/"
     redirects_path.write_text(
         "\n".join([f"{key} {val} 302" for key, val in redirects.items()]) + "\n"
     )
