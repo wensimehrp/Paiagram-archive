@@ -33,6 +33,8 @@ def main() -> None:
     redirects["/latest-snapshot/"] = f"{snapshot}"
     redirects["/latest-snapshot/docs"] = f"{snapshot}/docs/"
     redirects["/latest-snapshot/docs/"] = f"{snapshot}/docs/"
+    redirects["/latest-snapshot/api-docs"] = f"{snapshot}/api-docs/"
+    redirects["/latest-snapshot/api-docs/"] = f"{snapshot}/api-docs/"
     redirects_path.write_text(
         "\n".join([f"{key} {val} 302" for key, val in redirects.items()]) + "\n"
     )
