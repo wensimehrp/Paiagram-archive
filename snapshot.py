@@ -29,8 +29,8 @@ def main() -> None:
         line.split()[0]: line.split()[1]
         for line in Path("http_config/_redirects").read_text().splitlines()
     }
-    redirects["/latest-snapshot"] = f"{snapshot}"
-    redirects["/latest-snapshot/"] = f"{snapshot}"
+    redirects["/latest-snapshot"] = f"{snapshot}/"
+    redirects["/latest-snapshot/"] = f"{snapshot}/"
     redirects["/latest-snapshot/docs"] = f"{snapshot}/docs/"
     redirects["/latest-snapshot/docs/"] = f"{snapshot}/docs/"
     redirects["/latest-snapshot/api-docs"] = f"{snapshot}/api-docs/"
