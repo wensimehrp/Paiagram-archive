@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["LoadResult","SaveCategory","WriteResult"],"mod":["list_files","save"],"struct":["AvailableSaves"],"trait":["ExportObject"]};
