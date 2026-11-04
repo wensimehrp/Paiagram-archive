@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["envelope_2d","envelope_3d"],"struct":["IntervalRTreeObject","IntervalsRTree","NodeRTreeObject","NodesRTree","SpatialCache","TripLegRTreeObject","TripLegsRTree"]};
