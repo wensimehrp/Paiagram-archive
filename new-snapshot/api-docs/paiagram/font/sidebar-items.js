@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["load_default_font","load_font_name","load_font_to_egui"],"static":["FONT_DATABASE","TIMETABLE_FONT_ID","TIMETABLTE_TEXT_STYLE"]};

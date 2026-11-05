@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["ShaderEntry"],"mod":["_root","bytemuck_impls","gpu_trip","layout_asserts"],"trait":["SetBindGroup"]};
