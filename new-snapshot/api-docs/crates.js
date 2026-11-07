@@ -1,0 +1,2 @@
+window.ALL_CRATES = ["converter","paiagram","paiagram_core","paiagram_export","paiagram_extensions","paiagram_i18n","paiagram_oudia","paiagram_oudia_macros","paiagram_raptor","paiagram_rw","paiagram_selection","paiagram_soap"];
+//{"start":21,"fragment_lengths":[11,11,16,18,22,16,17,24,18,14,21,16]}
