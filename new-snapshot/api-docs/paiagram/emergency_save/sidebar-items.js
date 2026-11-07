@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["_setup_emergency_save","setup_emergency_save","show_dialog","update_emergency_save"],"static":["WORLD_BACKUP"]};
