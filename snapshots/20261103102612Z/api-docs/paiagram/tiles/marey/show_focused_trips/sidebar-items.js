@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["draw_polyline","show_focused_trip","show_trip_handles"]};

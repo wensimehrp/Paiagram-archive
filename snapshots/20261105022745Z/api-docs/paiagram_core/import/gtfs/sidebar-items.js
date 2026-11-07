@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["parse_gtfs","stop_lonlat"]};

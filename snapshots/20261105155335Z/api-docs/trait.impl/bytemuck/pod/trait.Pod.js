@@ -1,9 +1,0 @@
-(function() {
-    const implementors = Object.fromEntries([["paiagram",[["impl Pod for <a class=\"struct\" href=\"paiagram/tiles/marey/gpu_trip/gpu_trip/struct.CanvasLength.html\" title=\"struct paiagram::tiles::marey::gpu_trip::gpu_trip::CanvasLength\">CanvasLength</a>",0],["impl Pod for <a class=\"struct\" href=\"paiagram/tiles/marey/gpu_trip/gpu_trip/struct.EntrySegment.html\" title=\"struct paiagram::tiles::marey::gpu_trip::gpu_trip::EntrySegment\">EntrySegment</a>",0],["impl Pod for <a class=\"struct\" href=\"paiagram/tiles/graph/graph_intervals/graph_intervals/struct.IntervalPoint.html\" title=\"struct paiagram::tiles::graph::graph_intervals::graph_intervals::IntervalPoint\">IntervalPoint</a>",0],["impl Pod for <a class=\"struct\" href=\"paiagram/tiles/graph/graph_nodes/graph_nodes/struct.NodePoint.html\" title=\"struct paiagram::tiles::graph::graph_nodes::graph_nodes::NodePoint\">NodePoint</a>",0],["impl Pod for <a class=\"struct\" href=\"paiagram/tiles/marey/gpu_trip/gpu_trip/struct.Style.html\" title=\"struct paiagram::tiles::marey::gpu_trip::gpu_trip::Style\">Style</a>",0],["impl Pod for <a class=\"struct\" href=\"paiagram/tiles/marey/gpu_trip/gpu_trip/struct.Uniforms.html\" title=\"struct paiagram::tiles::marey::gpu_trip::gpu_trip::Uniforms\">Uniforms</a>",0],["impl Pod for <a class=\"struct\" href=\"paiagram/tiles/graph/graph_intervals/graph_intervals/struct.Uniforms.html\" title=\"struct paiagram::tiles::graph::graph_intervals::graph_intervals::Uniforms\">Uniforms</a>",0],["impl Pod for <a class=\"struct\" href=\"paiagram/tiles/graph/graph_nodes/graph_nodes/struct.Uniforms.html\" title=\"struct paiagram::tiles::graph::graph_nodes::graph_nodes::Uniforms\">Uniforms</a>",0]]]]);
-    if (window.register_implementors) {
-        window.register_implementors(implementors);
-    } else {
-        window.pending_implementors = implementors;
-    }
-})()
-//{"start":59,"fragment_lengths":[1655]}

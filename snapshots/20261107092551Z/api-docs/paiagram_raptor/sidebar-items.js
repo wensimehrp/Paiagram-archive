@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["make_query_data"],"struct":["Journey","RaptorTimetable"]};

@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"struct":["ConfigTile","ExtensionTile","GraphTile","IntervalsTile","MareyTile","ProfilerTile","RouteTimetableTile","ServiceClassesTile","StartTile","StationTile","TripTile"]};

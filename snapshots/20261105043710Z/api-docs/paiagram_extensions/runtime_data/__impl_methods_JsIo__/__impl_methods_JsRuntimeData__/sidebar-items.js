@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"struct":["__impl_marey_cache","__impl_route_info","__impl_selected_items"]};

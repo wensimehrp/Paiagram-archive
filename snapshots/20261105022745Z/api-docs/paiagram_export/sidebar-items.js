@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["GraphyFormat"],"mod":["graphy","gtfs","oudia"],"struct":["ExportGraphy","ExportGtfs","ExportOuDia"]};

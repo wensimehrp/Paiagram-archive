@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["main_display"],"mod":["autonavi","gpu_draw","graph_intervals","graph_nodes","map_content","select_content","viewport"],"struct":["GraphTile","MapPlugin"]};

@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["default_visible_rect","draw_time_lines","find_nearest_station_idx_from_pos","main_display","paint_time_cursor","select_trip_from_pos"],"mod":["gpu_draw","gpu_trip","label_placement","show_focused_trips"],"struct":["MareyTile","MareyTileNavigation","MareyTileNoCache"]};

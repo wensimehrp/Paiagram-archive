@@ -33,8 +33,8 @@ def main() -> None:
     redirects["/latest-snapshot/"] = f"/{snapshot}/"
     redirects["/latest-snapshot/docs"] = f"/{snapshot}/docs/"
     redirects["/latest-snapshot/docs/"] = f"/{snapshot}/docs/"
-    redirects["/latest-snapshot/api-docs"] = f"/{snapshot}/api-docs/"
-    redirects["/latest-snapshot/api-docs/"] = f"/{snapshot}/api-docs/"
+    redirects["/latest-snapshot/api-docs"] = f"/{snapshot}/api-docs/paiagram"
+    redirects["/latest-snapshot/api-docs/"] = f"/{snapshot}/api-docs/paiagram"
     redirects_path.write_text(
         "\n".join([f"{key} {val} 302" for key, val in redirects.items()]) + "\n"
     )
@@ -42,6 +42,10 @@ def main() -> None:
     old_snapshots = sorted(
         (entry for entry in snapshot.parent.iterdir() if entry.is_dir()), reverse=True
     )
+    for old in old_snapshots:
+        doc_path = old / "api-docs"
+        shutil.rmtree(doc_path)
+        print(f"Removed old documentation {doc_path}")
     for old in old_snapshots[RETENTION:]:
         shutil.rmtree(old)
         print(f"Removed old snapshot {old}.")

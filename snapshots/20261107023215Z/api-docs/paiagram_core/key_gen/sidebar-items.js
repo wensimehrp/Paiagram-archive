@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["CLIENT_BITS","CLIENT_MASK","COUNTER_BITS","COUNTER_MASK","MAX_CLIENT_ID","MAX_KEY","MAX_TIME_CS","TIME_SHIFT"],"fn":["client","client_id","creation_time","generation","next_id","now_cs","set_client_id"],"static":["CLIENT_ID"]};

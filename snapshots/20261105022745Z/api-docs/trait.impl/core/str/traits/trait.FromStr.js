@@ -1,9 +1,0 @@
-(function() {
-    const implementors = Object.fromEntries([["paiagram_oudia",[["impl FromStr for <a class=\"struct\" href=\"paiagram_oudia/ir/struct.Color.html\" title=\"struct paiagram_oudia::ir::Color\">Color</a>",0],["impl FromStr for <a class=\"enum\" href=\"paiagram_oudia/ir/enum.DiagramLineStyle.html\" title=\"enum paiagram_oudia::ir::DiagramLineStyle\">DiagramLineStyle</a>",0],["impl FromStr for <a class=\"enum\" href=\"paiagram_oudia/ir/enum.DiagramTrainInfoDisplay.html\" title=\"enum paiagram_oudia::ir::DiagramTrainInfoDisplay\">DiagramTrainInfoDisplay</a>",0],["impl FromStr for <a class=\"enum\" href=\"paiagram_oudia/ir/enum.Direction.html\" title=\"enum paiagram_oudia::ir::Direction\">Direction</a>",0],["impl FromStr for <a class=\"enum\" href=\"paiagram_oudia/operation/enum.OperationType.html\" title=\"enum paiagram_oudia::operation::OperationType\">OperationType</a>",0],["impl FromStr for <a class=\"enum\" href=\"paiagram_oudia/ir/enum.StationTimetableFormat.html\" title=\"enum paiagram_oudia::ir::StationTimetableFormat\">StationTimetableFormat</a>",0],["impl FromStr for <a class=\"enum\" href=\"paiagram_oudia/ir/enum.StationType.html\" title=\"enum paiagram_oudia::ir::StationType\">StationType</a>",0],["impl FromStr for <a class=\"enum\" href=\"paiagram_oudia/ir/enum.StopMarkDrawType.html\" title=\"enum paiagram_oudia::ir::StopMarkDrawType\">StopMarkDrawType</a>",0],["impl FromStr for <a class=\"struct\" href=\"paiagram_oudia/time/struct.Time.html\" title=\"struct paiagram_oudia::time::Time\">Time</a>",0],["impl FromStr for <a class=\"struct\" href=\"paiagram_oudia/timetable/struct.TimetableEntry.html\" title=\"struct paiagram_oudia::timetable::TimetableEntry\">TimetableEntry</a>",0]]]]);
-    if (window.register_implementors) {
-        window.register_implementors(implementors);
-    } else {
-        window.pending_implementors = implementors;
-    }
-})()
-//{"start":59,"fragment_lengths":[1669]}
