@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["display_time_indicator_indicator_horizontal","display_time_indicator_indicator_vertical"]};
