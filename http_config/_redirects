@@ -1,9 +1,9 @@
 /demo /0.1.3-alpha/?open=example.paia 302
 /china-railway /0.1.3-alpha/?open=example.paia 302
 /zhongguo-tielu /0.1.3-alpha/?open=example.paia&locale=zh-Hans 302
-/latest-snapshot /snapshots/20261110063959Z/ 302
-/latest-snapshot/ /snapshots/20261110063959Z/ 302
-/latest-snapshot/docs /snapshots/20261110063959Z/docs/ 302
-/latest-snapshot/docs/ /snapshots/20261110063959Z/docs/ 302
-/latest-snapshot/api-docs /snapshots/20261110063959Z/api-docs/paiagram 302
-/latest-snapshot/api-docs/ /snapshots/20261110063959Z/api-docs/paiagram 302
+/latest-snapshot /snapshots/20261110085016Z/ 302
+/latest-snapshot/ /snapshots/20261110085016Z/ 302
+/latest-snapshot/docs /snapshots/20261110085016Z/docs/ 302
+/latest-snapshot/docs/ /snapshots/20261110085016Z/docs/ 302
+/latest-snapshot/api-docs /snapshots/20261110085016Z/api-docs/paiagram 302
+/latest-snapshot/api-docs/ /snapshots/20261110085016Z/api-docs/paiagram 302

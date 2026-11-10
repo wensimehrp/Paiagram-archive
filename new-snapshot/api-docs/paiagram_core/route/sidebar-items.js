@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["RouteTimetableEntry","StationRecord"],"fn":["gen_progress"],"mod":["prep_marey","prep_route_timetable"],"struct":["MareyCache","RouteInterval","RouteIntervals","RouteTimetable","RouteTimetableExport","StationDisplayMode"],"type":["BucketPoint","TripBucket"]};
