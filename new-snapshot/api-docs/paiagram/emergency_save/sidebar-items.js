@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["_setup_emergency_save","setup_emergency_save","show_dialog"]};
