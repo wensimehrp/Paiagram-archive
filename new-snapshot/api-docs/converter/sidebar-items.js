@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["HIDE_THRESHOLD_BYTES"],"enum":["OutputFormat"],"fn":["convert","download_string","element_by_id","listen","load_file_into_input","main","refresh_ui"]};

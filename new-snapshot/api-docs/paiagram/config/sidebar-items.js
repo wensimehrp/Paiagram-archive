@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["AppLanguage"],"macro":[["make_lang",1]],"struct":["Preferences","Settings"]};

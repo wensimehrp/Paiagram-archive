@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["IntervalDirection"],"fn":["traversable"],"mod":["layout"],"struct":["Graph","GraphNoCache","SortedKey"]};
