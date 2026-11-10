@@ -1,0 +1,9 @@
+(function() {
+    const implementors = Object.fromEntries([["paiagram_core",[["impl Add for <a class=\"struct\" href=\"paiagram_core/units/struct.CanvasLength.html\" title=\"struct paiagram_core::units::CanvasLength\">CanvasLength</a>",0],["impl Add for <a class=\"struct\" href=\"paiagram_core/units/distance/struct.Distance.html\" title=\"struct paiagram_core::units::distance::Distance\">Distance</a>",0],["impl Add for <a class=\"type\" href=\"paiagram_core/units/time/type.TDuration.html\" title=\"type paiagram_core::units::time::TDuration\">TDuration</a>",0],["impl Add for <a class=\"struct\" href=\"paiagram_core/units/speed/struct.Velocity.html\" title=\"struct paiagram_core::units::speed::Velocity\">Velocity</a>",0],["impl Add&lt;<a class=\"struct\" href=\"paiagram_core/units/time/struct.TimetableDuration.html\" title=\"struct paiagram_core::units::time::TimetableDuration\">TimetableDuration</a>&gt; for <a class=\"struct\" href=\"paiagram_core/units/time/struct.TimetableTime.html\" title=\"struct paiagram_core::units::time::TimetableTime\">TimetableTime</a>",0],["impl Add&lt;<a class=\"struct\" href=\"paiagram_core/units/time/struct.TimetableTime.html\" title=\"struct paiagram_core::units::time::TimetableTime\">TimetableTime</a>&gt; for <a class=\"type\" href=\"paiagram_core/units/time/type.TDuration.html\" title=\"type paiagram_core::units::time::TDuration\">TDuration</a>",0]]],["paiagram_oudia",[["impl Add for <a class=\"struct\" href=\"paiagram_oudia/time/struct.Time.html\" title=\"struct paiagram_oudia::time::Time\">Time</a>",0]]]]);
+    if (window.register_implementors) {
+        window.register_implementors(implementors);
+    } else {
+        window.pending_implementors = implementors;
+    }
+})()
+//{"start":59,"fragment_lengths":[1345,159]}
