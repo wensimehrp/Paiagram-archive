@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["Structure"],"fn":["parse_to_ast"],"mod":["oudia"],"trait":["GetItemWithKey","SerializeToOud"]};

@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["AGENCY_ID","CALENDAR_END_DATE","CALENDAR_START_DATE","ROUTE_TYPE","ROUTE_UNKNOWN_ID","SERVICE_ID"],"fn":["entry_times","format_time","node_id","service_class_id","station_id","trip_id","write_agency","write_calendar","write_feed_info","write_routes","write_stop_times","write_stops","write_trips"],"struct":["ExportGtfs"]};
