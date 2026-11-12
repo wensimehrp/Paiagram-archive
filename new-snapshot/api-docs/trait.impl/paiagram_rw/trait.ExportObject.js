@@ -1,9 +1,0 @@
-(function() {
-    const implementors = Object.fromEntries([["paiagram_core",[["impl <a class=\"trait\" href=\"paiagram_rw/trait.ExportObject.html\" title=\"trait paiagram_rw::ExportObject\">ExportObject</a> for <a class=\"struct\" href=\"paiagram_core/route/prep_route_timetable/struct.RouteTimetableExport.html\" title=\"struct paiagram_core::route::prep_route_timetable::RouteTimetableExport\">RouteTimetableExport</a>",0],["impl <a class=\"trait\" href=\"paiagram_rw/trait.ExportObject.html\" title=\"trait paiagram_rw::ExportObject\">ExportObject</a> for <a class=\"enum\" href=\"paiagram_core/save/enum.SaveData.html\" title=\"enum paiagram_core::save::SaveData\">SaveData</a>",0]]],["paiagram_export",[["impl ExportObject for <a class=\"struct\" href=\"paiagram_export/graphy/struct.ExportGraphy.html\" title=\"struct paiagram_export::graphy::ExportGraphy\">ExportGraphy</a>",0],["impl ExportObject for <a class=\"struct\" href=\"paiagram_export/gtfs/struct.ExportGtfs.html\" title=\"struct paiagram_export::gtfs::ExportGtfs\">ExportGtfs</a>",0],["impl ExportObject for <a class=\"struct\" href=\"paiagram_export/oudia/struct.ExportOuDia.html\" title=\"struct paiagram_export::oudia::ExportOuDia\">ExportOuDia</a>",0]]],["paiagram_extensions",[["impl ExportObject for <a class=\"struct\" href=\"paiagram_extensions/runtime_data/struct.JsDataExporter.html\" title=\"struct paiagram_extensions::runtime_data::JsDataExporter\">JsDataExporter</a>",0]]]]);
-    if (window.register_implementors) {
-        window.register_implementors(implementors);
-    } else {
-        window.pending_implementors = implementors;
-    }
-})()
-//{"start":59,"fragment_lengths":[628,538,229]}

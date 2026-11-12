@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["EARTH_RADIUS_METERS","WEB_MERCATOR_MAX_LAT"],"enum":["CoordType","WgsProjection"],"fn":["haversine"],"struct":["Coord","XyPos"]};

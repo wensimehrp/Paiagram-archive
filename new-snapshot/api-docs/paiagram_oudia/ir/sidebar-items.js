@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["DiagramLineStyle","DiagramTrainInfoDisplay","Direction","IrConversionError","StationTimetableFormat","StationType","StopMarkDrawType"],"fn":["parse_timetable_entries","travelling_duration"],"mod":["diagram_trips","station"],"struct":["Class","Color","Diagram","DisplayProperties","Root","Rotation","Route","Trip","Window","WindowPosition"]};

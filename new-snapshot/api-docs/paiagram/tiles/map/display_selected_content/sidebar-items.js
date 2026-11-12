@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["display_selected_content","handle_node_selection","map_trip_lines"]};

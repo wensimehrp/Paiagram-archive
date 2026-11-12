@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["UiCommand"],"fn":["show_ui"],"mod":["app","command_palette","config","distance_to_line","emergency_save","font","human_time","load","tiles","timer","trip_schedule_visual","ui_tiles","widgets"],"struct":["UiState"]};
