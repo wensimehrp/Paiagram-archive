@@ -1,0 +1,2 @@
+window.ALL_CRATES = [{"c":"converter"},{"c":"paiagram"},{"c":"paiagram_core"},{"c":"paiagram_export"},{"c":"paiagram_extensions"},{"c":"paiagram_i18n"},{"c":"paiagram_oudia"},{"c":"paiagram_oudia_macros"},{"c":"paiagram_raptor"},{"c":"paiagram_rw"},{"c":"paiagram_selection"},{"c":"paiagram_soap"}];
+//{"start":21,"fragment_lengths":[17,17,22,24,28,22,23,30,24,20,27,22]}

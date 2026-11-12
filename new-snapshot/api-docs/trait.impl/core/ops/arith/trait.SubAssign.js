@@ -1,0 +1,9 @@
+(function() {
+    const implementors = Object.fromEntries([["paiagram_core",[["impl SubAssign for <a class=\"struct\" href=\"paiagram_core/units/struct.CanvasLength.html\" title=\"struct paiagram_core::units::CanvasLength\">CanvasLength</a>",0],["impl SubAssign for <a class=\"struct\" href=\"paiagram_core/units/distance/struct.Distance.html\" title=\"struct paiagram_core::units::distance::Distance\">Distance</a>",0],["impl SubAssign for <a class=\"struct\" href=\"paiagram_core/route/prep_route_timetable/struct.StationDisplayMode.html\" title=\"struct paiagram_core::route::prep_route_timetable::StationDisplayMode\">StationDisplayMode</a>",0],["impl SubAssign for <a class=\"type\" href=\"paiagram_core/units/time/type.TDuration.html\" title=\"type paiagram_core::units::time::TDuration\">TDuration</a>",0],["impl SubAssign for <a class=\"struct\" href=\"paiagram_core/units/speed/struct.Velocity.html\" title=\"struct paiagram_core::units::speed::Velocity\">Velocity</a>",0],["impl SubAssign&lt;<a class=\"struct\" href=\"paiagram_core/units/time/struct.TimetableDuration.html\" title=\"struct paiagram_core::units::time::TimetableDuration\">TimetableDuration</a>&gt; for <a class=\"struct\" href=\"paiagram_core/units/time/struct.TimetableTime.html\" title=\"struct paiagram_core::units::time::TimetableTime\">TimetableTime</a>",0]]],["paiagram_oudia",[["impl SubAssign for <a class=\"struct\" href=\"paiagram_oudia/time/struct.Time.html\" title=\"struct paiagram_oudia::time::Time\">Time</a>",0]]]]);
+    if (window.register_implementors) {
+        window.register_implementors(implementors);
+    } else {
+        window.pending_implementors = implementors;
+    }
+})()
+//{"start":59,"fragment_lengths":[1282,165]}
