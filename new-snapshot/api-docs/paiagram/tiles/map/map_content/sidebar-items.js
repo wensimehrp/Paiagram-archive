@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["ICON_HALF_SIZE"],"fn":["load_trip_icon","render_map_contents","trip_leg_current_pos"]};

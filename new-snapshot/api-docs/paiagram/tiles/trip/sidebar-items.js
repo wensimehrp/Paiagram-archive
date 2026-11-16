@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["row_ui","select_a_trip","show_cursor_to_insert_at_idx","show_trip"],"mod":["widgets"],"struct":["TripTile"]};

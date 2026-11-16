@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["SelectedItem","SelectedItems"],"macro":[["gen_selected_items",1]],"struct":["TripSelection"],"type":["EditingOffset"]};
