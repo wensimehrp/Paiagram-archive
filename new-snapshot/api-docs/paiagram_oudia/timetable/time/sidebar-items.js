@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["_PEST_GRAMMAR_TimeParser"],"enum":["AliasedRule","Rule"],"struct":["TimeParser"],"type":["Node","Result"]};

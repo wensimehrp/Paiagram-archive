@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["distance_sq_to_line"]};
