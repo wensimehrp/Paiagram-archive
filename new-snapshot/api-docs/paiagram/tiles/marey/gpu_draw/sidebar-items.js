@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["SEGMENT_SIZE","STATION_SIZE","UNIFORM_SIZE"],"fn":["init","make_bind_group","storage_buffer"],"struct":["GlobalMareyRendererResources","MareyCallback","PerTileMareyRendererResources"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["INTERVAL_POINT_SIZE","NODE_POINT_SIZE","UNIFORM_SIZE"],"fn":["color_target","init","make_interval_bind_group","make_node_bind_group","msaa","storage_buffer"],"struct":["GlobalGraphRendererResources","GraphBuffers","GraphCallback"]};
