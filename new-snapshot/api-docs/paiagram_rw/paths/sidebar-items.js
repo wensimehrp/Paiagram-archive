@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["APP_DIR_NAME"],"fn":["storage_dir"]};

@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["to_human_time_string"]};
