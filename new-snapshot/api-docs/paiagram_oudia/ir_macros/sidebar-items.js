@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"macro":[["make_ir_enum",1],["make_ir_type",1]]};

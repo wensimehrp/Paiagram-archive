@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["LOGO_COORDINATES"],"enum":["LogoStroke"],"mod":["buttons","indicators","search"],"struct":["DurationDragValue","TimeDragValue"]};
