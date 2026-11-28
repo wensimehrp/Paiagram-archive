@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["FIT_PADDING"],"fn":["fit_viewport_to_nodes","get_median_center","get_nodes_range"]};

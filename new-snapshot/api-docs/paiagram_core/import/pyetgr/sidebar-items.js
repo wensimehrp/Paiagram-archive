@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["parse_pyetgr"],"struct":["Config","Line","Root","Station","TimetableEntry","Trip","Vehicle","VehicleServiceEntry"]};

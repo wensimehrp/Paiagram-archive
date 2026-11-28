@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["representatives"],"struct":["CrossingCheckRule","OuterTerminal","Station","Track"],"trait":["StationToGraph"]};

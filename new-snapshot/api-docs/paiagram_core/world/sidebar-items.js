@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["add_trip_to_caches","for_each_trip_interval","fresh","insert_sorted","remove_sorted","remove_trip_from_caches","updated"]};

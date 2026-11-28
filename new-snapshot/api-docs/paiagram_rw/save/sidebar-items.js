@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["MAX_AUTOSAVES"],"fn":["prune_autosaves"],"mod":["native"]};
