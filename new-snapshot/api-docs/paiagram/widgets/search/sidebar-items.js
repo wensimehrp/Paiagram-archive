@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["build_matcher","search"],"static":["PINYIN_MATCH_DATA","ROMAJI_MATCH_DATA"]};
