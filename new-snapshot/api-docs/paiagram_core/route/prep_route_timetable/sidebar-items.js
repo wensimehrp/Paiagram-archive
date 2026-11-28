@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["RouteTimetableEntry"],"fn":["merge_candidates","merge_or_push_columns"],"struct":["RouteTimetable","RouteTimetableExport","StationDisplayMode"]};

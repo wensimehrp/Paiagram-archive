@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"attr":["oudia"],"enum":["DefaultValue","OuDiaType","OuterType"],"fn":["doc_aliases","inspect_type","is_bool_type"],"struct":["FieldOpts","StructArgs"]};

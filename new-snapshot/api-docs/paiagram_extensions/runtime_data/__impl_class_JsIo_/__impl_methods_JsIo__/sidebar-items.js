@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"struct":["__impl_save_file"]};
